@@ -1,9 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import Post
 
 
 def index(request):
-    return render(request, 'blogging/HomePage.html', {'title': 'Главная страница'})
+    posts = Post.objects.all()
+    return render(request, 'blogging/HomePage.html', {'posts': posts, 'title': 'Главная страница'})
 
 
 def category(request, type):
@@ -15,7 +17,7 @@ def login(request):
 
 
 def about(request):
-    return HttpResponse("<h1>О нас</h1>")
+    return render(request, 'blogging/about.html', {'title': 'О сайте'})
 
 
 def contact(request):

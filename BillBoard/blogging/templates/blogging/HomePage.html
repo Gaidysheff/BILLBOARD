@@ -1,6 +1,14 @@
 {% extends 'blogging/base.html' %} {% block content %}
-<!-- {% load i18n %}
-{% load tz %} -->
 
-<h1>Домашняя страница</h1>
-{% endblock %}
+<h1>{{ title }}</h1>
+<ul>
+  {% for p in posts %}
+  <li>
+    <h2>{{p.title}}</h2>
+    <p>{{p.text}}</p>
+    <p>{{p.photo}}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
