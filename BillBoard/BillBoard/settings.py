@@ -147,7 +147,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-
 # DOMAIN = os.getenv('DOMAIN')
 # EMAIL = os.getenv('EMAIL')
 
@@ -156,4 +155,6 @@ EMAIL_PORT = 465
 EMAIL_HOST_USER = 'gaidysheff'
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 EMAIL_USE_SSL = True
-# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'
