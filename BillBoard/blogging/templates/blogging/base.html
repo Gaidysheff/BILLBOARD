@@ -25,7 +25,7 @@
       <div class="container" style="margin-left: 5px">
         <!-- Заменить потом ссылку на favicon на страничку создателя сайта -->
         <a class="navbar-brand" href="{% url 'home' %}"
-          ><img src="/static/newsapp/images/favicon-32x32.png" alt="My logo" />
+          ><img src="/static/blogging/images/favicon-32x32.png" alt="My logo" />
           The Best MMORPG</a
         >
         <button
@@ -39,9 +39,34 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          {% block mainmenu %}
+          <ul id="mainmenu" class="navbar-nav ml-auto">
+            {% for m in menu %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
+            </li>
+            {% endfor %} {% if request.user.is_authenticated %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'logout' %}"
+                >{{ user.username }} | Выйти</a
+              >
+            </li>
+            {% else %}
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'signup' %}">Регистрация</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'login' %}">Войти</a>
+            </li>
+            {% endif %}
+          </ul>
+          {% endblock mainmenu %}
+        </div>
       </div>
     </nav>
 
-    {% block content %} {% endblock content %}
+    {% block content %} {%endblock content %}
   </body>
 </html>

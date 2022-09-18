@@ -4,8 +4,20 @@ from .models import Post
 from django.core.mail import send_mail, send_mass_mail
 
 
+menu = [
+    {'title': "О сайте", 'url_name': 'about'},
+    {'title': "Добавить блог", 'url_name': 'add_blog'},
+    {'title': "Обратная связь", 'url_name': 'contact'},
+]
+
+
 def index(request):
     posts = Post.objects.all()
+    context = {
+        'menu': menu,
+        'posts': posts,
+        'title': 'Главная страница'
+    }
 
     """ ВАРИАНТ-1. В этом варианте все адреса получателей будут видны всем получателям одновременно"""
 
@@ -27,9 +39,9 @@ def index(request):
         (Subject, Message, 'gaidysheff@yandex.ru',
          ['gaidysheff@gmail.com']),
     )
-    send_mass_mail(datatuple)
+    # send_mass_mail(datatuple)
 
-    return render(request, 'blogging/HomePage.html', {'posts': posts, 'title': 'Главная страница'})
+    return render(request, 'blogging/HomePage.html', context=context)
 
 
 def category(request, type):
@@ -38,6 +50,10 @@ def category(request, type):
 
 def login(request):
     return HttpResponse("<h1>Авторизация</h1>")
+
+
+def addblog(request):
+    return HttpResponse("Добавление статьи")
 
 
 def about(request):

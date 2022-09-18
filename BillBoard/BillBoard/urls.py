@@ -24,7 +24,7 @@ from blogging.views import pageNotFound
 
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    # path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('admin/', admin.site.urls),
     path('users/', include('customuser.urls')),
     path('users/', include('django.contrib.auth.urls')),
