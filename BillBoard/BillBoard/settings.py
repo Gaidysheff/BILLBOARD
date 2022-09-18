@@ -67,7 +67,7 @@ ROOT_URLCONF = 'BillBoard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates', ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,8 +147,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
+AUTH_USER_MODEL = 'customuser.CustomUser'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+
 # DOMAIN = os.getenv('DOMAIN')
 # EMAIL = os.getenv('EMAIL')
+
 
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
