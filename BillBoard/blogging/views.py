@@ -1,9 +1,10 @@
+from django.http import Http404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Post
-
+from .models import Post, Category
+from django.core.handlers import exception
 
 menu = [
     {'title': "О сайте", 'url_name': 'about'},
@@ -14,12 +15,12 @@ menu = [
 
 def index(request):
     posts = Post.objects.all()
-    # cats = Category.objects.all()
+    cats = Category.objects.all()
 
     context = {
         'menu': menu,
         'posts': posts,
-        # 'cats': cats,
+        'cats': cats,
         'title': 'Главная страница',
         'cat_selected': 0,
     }
@@ -33,6 +34,10 @@ def show_post(request, post_id):
 def show_category(request, cat_id):
     posts = Post.objects.filter(category=cat_id)
     cats = Category.objects.all()
+
+    if len(posts) == 0:
+        return pageNotFound(request, exception)
+
     context = {
         'menu': menu,
         'posts': posts,

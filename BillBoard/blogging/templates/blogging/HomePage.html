@@ -5,8 +5,8 @@
     {% for p in posts %}
     <div class="col" style="padding-top: 20px">
       <div class="card">
-        <h5>Category: {{p.postCategory}}</h5>
-        <p>"Date: {{p.dateCreation|date:"d-m-Y H:i:s"}}</p>
+        <h5>Категория: {{p.category}}</h5>
+        <p>"Дата: {{p.dateCreation|date:"d-m-Y H:i:s"}}</p>
         {% if p.photo %}
         <img class="rounded-img" src="{{p.photo.url}}" alt="image" />
         <!-- <img class="card-img-top" src="{{p.photo.url}}" alt="image" /> -->
