@@ -14,16 +14,33 @@ menu = [
 
 def index(request):
     posts = Post.objects.all()
+    # cats = Category.objects.all()
+
     context = {
         'menu': menu,
         'posts': posts,
-        'title': 'Главная страница'
+        # 'cats': cats,
+        'title': 'Главная страница',
+        'cat_selected': 0,
     }
     return render(request, 'blogging/HomePage.html', context=context)
 
 
-def category(request, type):
-    return HttpResponse(f"<h1>Объявы по категориям</h1><p>{type}</p>")
+def show_post(request, post_id):
+    return HttpResponse(f"<h1>Отображение статьи с id = {post_id}</h1>")
+
+
+def show_category(request, cat_id):
+    posts = Post.objects.filter(category=cat_id)
+    cats = Category.objects.all()
+    context = {
+        'menu': menu,
+        'posts': posts,
+        'cats': cats,
+        'title': 'Отображение по категориям',
+        'cat_selected': cat_id,
+    }
+    return render(request, 'blogging/HomePage.html', context=context)
 
 
 class LoginUser(LoginView):

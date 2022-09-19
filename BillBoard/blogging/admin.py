@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Feedback, Post
+from .models import Feedback, Post, Category
 
 
 @admin.register(Feedback)
@@ -18,13 +18,9 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug', 'text', 'photo', 'upload', 'dateCreation',
                     'категория', 'автор'
                     )
-    list_display_links = ('id', 'title')
-    search_fields = ('title', 'text')
-    # list_editable = ('category', ) """ пригодится, когда категория будет самостоятельной моделью"""
-    list_filter = (
-        'dateCreation',
-        # 'сategory'
-    )
+    list_display_links = ('id', 'title', )
+    search_fields = ('title', 'text', )
+    list_filter = ('dateCreation', )
     prepopulated_fields = {'slug': ('title',)}
 
     inlines = [FeedbackInline]
@@ -36,6 +32,13 @@ class PostAdmin(admin.ModelAdmin):
     @admin.display(ordering='-category')
     def категория(self, obj):
         return obj.category
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'slug', )
+    search_fields = ('name', )
+    list_filter = ('name', )
 
 
 # _______добавление команд в список действий в админке ____________

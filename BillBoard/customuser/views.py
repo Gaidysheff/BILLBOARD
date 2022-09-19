@@ -17,6 +17,11 @@ class SignUp(generic.CreateView):
     users = CustomUser.objects.all()
     registered_user = users[len(users)-1].email
 
+# from urllib import request
+# from django.contrib import auth
+# auth.get_user(request).username
+# auth.get_user(request).check_password()
+
     """ ВАРИАНТ-1. В этом варианте все адреса получателей будут видны всем получателям одновременно"""
 
     send_mail(
