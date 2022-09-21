@@ -12,8 +12,8 @@ class Post(models.Model):
     title = models.CharField(max_length=128, unique=True,
                              verbose_name='Заголовок поста')
     # slug = AutoSlugField(populate_from='title')
-    slug = models.SlugField(max_length=255, unique=True, default=uuid.uuid4, db_index=True,
-                            verbose_name='URL', help_text=_('slug назначится автоматически'))
+    slug = models.SlugField(max_length=255, unique=True, db_index=True,
+                            verbose_name='URL', help_text=_('slug назначится автоматически'))  # default=uuid.uuid4,
     text = models.TextField(verbose_name='Текст поста',
                             help_text=_('Введите здесь текст своего Поста.'))
     photo = models.ImageField(
@@ -35,9 +35,9 @@ class Post(models.Model):
     def preview(self):
         return '{} ... {}'.format(self.text[0:123], str(self.rating))
 
-    def save(self,  *args, **kwargs):
-        self.slug = slugify(self.title)
-        return super(Post, self).save(*args, **kwargs)
+    # def save(self,  *args, **kwargs):
+    #     self.slug = slugify(self.title)
+    #     return super(Post, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
@@ -60,8 +60,8 @@ class Post(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=64, unique=True,
                             verbose_name='Название категории')
-    slug = models.SlugField(max_length=255, unique=True, default=uuid.uuid4,
-                            db_index=True, verbose_name='URL')
+    slug = models.SlugField(max_length=255, unique=True,
+                            db_index=True, verbose_name='URL')  # default=uuid.uuid4,
 
     class Meta:
         verbose_name = 'Категория'
