@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.http import Http404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
@@ -27,13 +28,21 @@ def index(request):
     return render(request, 'blogging/HomePage.html', context=context)
 
 
-def show_post(request, post_id):
-    return HttpResponse(f"<h1>Отображение статьи с id = {post_id}</h1>")
+def show_post(request, post_slug):
+    post = get_object_or_404(Post, slug=post_slug)
+
+    context = {
+        'menu': menu,
+        'post': post,
+        'title': post.title,
+        'cat_selected': post.category_id,
+    }
+    return render(request, 'blogging/post.html', context=context)
 
 
 def show_category(request, cat_id):
     posts = Post.objects.filter(category=cat_id)
-    cats = Category.objects.all()
+    title_category = Category.objects.get(id=cat_id)
 
     if len(posts) == 0:
         return pageNotFound(request, exception)
@@ -41,8 +50,7 @@ def show_category(request, cat_id):
     context = {
         'menu': menu,
         'posts': posts,
-        'cats': cats,
-        'title': 'Отображение по категориям',
+        'title': title_category,
         'cat_selected': cat_id,
     }
     return render(request, 'blogging/HomePage.html', context=context)

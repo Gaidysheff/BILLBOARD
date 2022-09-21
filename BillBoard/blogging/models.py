@@ -32,7 +32,7 @@ class Post(models.Model):
         return '{} ... {}'.format(self.text[0:123], str(self.rating))
 
     def get_absolute_url(self):
-        return reverse('post', kwargs={'post_id': self.pk})
+        return reverse('post', kwargs={'post_slug': self.slug})
 
     # TYPE = (
     #     ('tanks', 'Танки'),
