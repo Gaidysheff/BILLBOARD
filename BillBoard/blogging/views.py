@@ -1,9 +1,11 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from django.http import Http404
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.views import LoginView
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from .forms import AddPostForm
 from .models import Post, Category
 from django.core.handlers import exception
 
@@ -27,6 +29,17 @@ def index(request):
     }
     return render(request, 'blogging/HomePage.html', context=context)
 
+
+# def show_post(request, post_id):
+#     post = get_object_or_404(Post, pk=post_id)
+
+#     context = {
+#         'menu': menu,
+#         'post': post,
+#         'title': post.title,
+#         'cat_selected': post.category_id,
+#     }
+#     return render(request, 'blogging/post.html', context=context)
 
 def show_post(request, post_slug):
     post = get_object_or_404(Post, slug=post_slug)
@@ -66,8 +79,16 @@ class LoginUser(LoginView):
     #     return dict(list(context.items()) + list(c_def.items()))
 
 
+# @login_required
 def addblog(request):
-    return HttpResponse("Добавление статьи")
+    if request.method == 'POST':
+        form = AddPostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = AddPostForm()
+    return render(request, 'blogging/addblog.html', {'form': form, 'menu': menu, 'title': 'Добавление статьи'})
 
 
 def about(request):
