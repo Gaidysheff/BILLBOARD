@@ -57,6 +57,22 @@
         "documentation": {}
     },
     {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -73,11 +89,51 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_lazy",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic.base",
+        "description": "django.views.generic.base",
+        "isExtraImport": true,
+        "detail": "django.views.generic.base",
         "documentation": {}
     },
     {
@@ -121,6 +177,30 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -146,6 +226,134 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -194,6 +402,80 @@
         "documentation": {}
     },
     {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "autoslug.fields",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "autoslug.fields",
+        "description": "autoslug.fields",
+        "detail": "autoslug.fields",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "blogging.models",
+        "description": "blogging.models",
+        "isExtraImport": true,
+        "detail": "blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "ngettext",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
         "label": "AppConfig",
         "importPath": "django.apps",
         "description": "django.apps",
@@ -210,27 +492,19 @@
         "documentation": {}
     },
     {
-        "label": "gettext_lazy",
-        "importPath": "django.utils.translation",
-        "description": "django.utils.translation",
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
         "isExtraImport": true,
-        "detail": "django.utils.translation",
+        "detail": "django.core.exceptions",
         "documentation": {}
     },
     {
-        "label": "gettext_lazy",
-        "importPath": "django.utils.translation",
-        "description": "django.utils.translation",
+        "label": "AutoSlugField",
+        "importPath": "autoslug",
+        "description": "autoslug",
         "isExtraImport": true,
-        "detail": "django.utils.translation",
-        "documentation": {}
-    },
-    {
-        "label": "gettext_lazy",
-        "importPath": "django.utils.translation",
-        "description": "django.utils.translation",
-        "isExtraImport": true,
-        "detail": "django.utils.translation",
+        "detail": "autoslug",
         "documentation": {}
     },
     {
@@ -242,6 +516,14 @@
         "documentation": {}
     },
     {
+        "label": "slugify",
+        "importPath": "django.utils.text",
+        "description": "django.utils.text",
+        "isExtraImport": true,
+        "detail": "django.utils.text",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -255,6 +537,70 @@
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "SignUp",
+        "importPath": "customuser.views",
+        "description": "customuser.views",
+        "isExtraImport": true,
+        "detail": "customuser.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
+        "label": "exception",
+        "importPath": "django.core.handlers",
+        "description": "django.core.handlers",
+        "isExtraImport": true,
+        "detail": "django.core.handlers",
+        "documentation": {}
+    },
+    {
+        "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -266,7 +612,15 @@
         "documentation": {}
     },
     {
-        "label": "render",
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -282,11 +636,43 @@
         "documentation": {}
     },
     {
-        "label": "send_mail",
-        "importPath": "django.core.mail",
-        "description": "django.core.mail",
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
         "isExtraImport": true,
-        "detail": "django.core.mail",
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -296,6 +682,14 @@
         "importPath": "django.utils.timezone",
         "description": "django.utils.timezone",
         "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
         "documentation": {}
     },
     {
@@ -336,6 +730,38 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "send_mass_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "generic",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -424,7 +850,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "ROOT_URLCONF = 'BillBoard.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "peekOfCode": "ROOT_URLCONF = 'BillBoard.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates', ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -433,7 +859,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates', ],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -478,7 +904,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type",
+        "peekOfCode": "LANGUAGE_CODE = 'ru'\nTIME_ZONE = 'Europe/Moscow'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -487,7 +913,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
+        "peekOfCode": "TIME_ZONE = 'Europe/Moscow'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -523,7 +949,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# DOMAIN = os.getenv('DOMAIN')",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\nSTATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nAUTH_USER_MODEL = 'customuser.CustomUser'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -532,7 +958,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "STATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')",
+        "peekOfCode": "STATICFILES_DIRS = []\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nAUTH_USER_MODEL = 'customuser.CustomUser'\nLOGIN_REDIRECT_URL = '/'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -541,7 +967,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_ROOT\n# https://docs.djangoproject.com/en/4.0/ref/settings/#std-setting-MEDIA_URL\nMEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nAUTH_USER_MODEL = 'customuser.CustomUser'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -550,7 +976,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, 'media')\nMEDIA_URL = '/media/'\nAUTH_USER_MODEL = 'customuser.CustomUser'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -559,7 +985,34 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "MEDIA_URL = '/media/'\nAUTH_USER_MODEL = 'customuser.CustomUser'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')",
+        "detail": "BillBoard.BillBoard.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "BillBoard.BillBoard.settings",
+        "description": "BillBoard.BillBoard.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'customuser.CustomUser'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True",
+        "detail": "BillBoard.BillBoard.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "BillBoard.BillBoard.settings",
+        "description": "BillBoard.BillBoard.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'",
+        "detail": "BillBoard.BillBoard.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGOUT_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "BillBoard.BillBoard.settings",
+        "description": "BillBoard.BillBoard.settings",
+        "peekOfCode": "LOGOUT_REDIRECT_URL = '/'\n# DOMAIN = os.getenv('DOMAIN')\n# EMAIL = os.getenv('EMAIL')\nEMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -568,7 +1021,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "EMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "EMAIL_HOST = 'smtp.yandex.ru'\nEMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -577,7 +1030,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "EMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "EMAIL_PORT = 465\nEMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -586,7 +1039,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "EMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "EMAIL_HOST_USER = 'gaidysheff'\nEMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -595,7 +1048,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')\nEMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -604,7 +1057,25 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "EMAIL_USE_SSL = True\n# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'",
+        "peekOfCode": "EMAIL_USE_SSL = True\nEMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
+        "detail": "BillBoard.BillBoard.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "BillBoard.BillBoard.settings",
+        "description": "BillBoard.BillBoard.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'\n# EMAIL_FILE_PATH = '/Users/admin/Projects/Skillfactory/BILLBOARD/app-messages'\nEMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
+        "detail": "BillBoard.BillBoard.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_FILE_PATH",
+        "kind": 5,
+        "importPath": "BillBoard.BillBoard.settings",
+        "description": "BillBoard.BillBoard.settings",
+        "peekOfCode": "EMAIL_FILE_PATH = '~/BILLBOARD/app-messages'",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -613,7 +1084,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.urls",
         "description": "BillBoard.BillBoard.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('blogging.urls')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL,\n                          document_root=settings.MEDIA_ROOT)\nhandler404 = pageNotFound",
+        "peekOfCode": "urlpatterns = [\n    # path('', TemplateView.as_view(template_name='home.html'), name='home'),\n    path('admin/', admin.site.urls),\n    path('users/', include('customuser.urls')),\n    path('users/', include('django.contrib.auth.urls')),\n    path('', include('blogging.urls')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL,\n                          document_root=settings.MEDIA_ROOT)",
         "detail": "BillBoard.BillBoard.urls",
         "documentation": {}
     },
@@ -654,11 +1125,119 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0003_category_alter_feedback_options_alter_post_options_and_more",
+        "description": "BillBoard.blogging.migrations.0003_category_alter_feedback_options_alter_post_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0002_alter_post_author'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Category',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=64, unique=True)),",
+        "detail": "BillBoard.blogging.migrations.0003_category_alter_feedback_options_alter_post_options_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0004_alter_category_options_alter_category_name_and_more",
+        "description": "BillBoard.blogging.migrations.0004_alter_category_options_alter_category_name_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('blogging', '0003_category_alter_feedback_options_alter_post_options_and_more'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='category',\n            options={'ordering': ['name'], 'verbose_name': 'Категория', 'verbose_name_plural': 'Категории'},\n        ),",
+        "detail": "BillBoard.blogging.migrations.0004_alter_category_options_alter_category_name_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0005_alter_category_slug_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0005_alter_category_slug_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0004_alter_category_options_alter_category_name_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='category',\n            name='slug',\n            field=models.SlugField(default=uuid.uuid1, max_length=255, unique=True, verbose_name='URL'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0005_alter_category_slug_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0006_alter_category_slug_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0006_alter_category_slug_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0005_alter_category_slug_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='category',\n            name='slug',\n            field=models.SlugField(default=uuid.uuid4, max_length=255, unique=True, verbose_name='URL'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0006_alter_category_slug_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0007_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0007_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0006_alter_category_slug_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='slug',\n            field=autoslug.fields.AutoSlugField(editable=False, populate_from='title'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0007_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0008_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0008_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0007_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='slug',\n            field=autoslug.fields.AutoSlugField(editable=False, populate_from=['title', 'category']),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0008_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0009_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0009_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0008_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='slug',\n            field=autoslug.fields.AutoSlugField(editable=False, populate_from=['title', 'author']),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0009_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0010_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0010_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0009_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='slug',\n            field=autoslug.fields.AutoSlugField(editable=False, populate_from='title'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0010_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0011_alter_post_title",
+        "description": "BillBoard.blogging.migrations.0011_alter_post_title",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0010_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='title',\n            field=models.CharField(max_length=128, unique=True, verbose_name='Заголовок поста'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0011_alter_post_title",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0012_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0012_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0011_alter_post_title'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='post',\n            name='slug',\n            field=models.SlugField(default=uuid.uuid4, help_text='slug назначится автоматически', max_length=255, unique=True, verbose_name='URL'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0012_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "show_categories",
+        "kind": 2,
+        "importPath": "BillBoard.blogging.templatetags.blogging_tags",
+        "description": "BillBoard.blogging.templatetags.blogging_tags",
+        "peekOfCode": "def show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}",
+        "detail": "BillBoard.blogging.templatetags.blogging_tags",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 5,
+        "importPath": "BillBoard.blogging.templatetags.blogging_tags",
+        "description": "BillBoard.blogging.templatetags.blogging_tags",
+        "peekOfCode": "register = template.Library()\n@register.inclusion_tag('blogging/list_categories.html')\ndef show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}",
+        "detail": "BillBoard.blogging.templatetags.blogging_tags",
+        "documentation": {}
+    },
+    {
         "label": "FeedbackAdmin",
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class FeedbackAdmin(admin.ModelAdmin):\n    pass\nclass FeedbackInline(admin.TabularInline):\n    model = Feedback\n    extra = 0\n@admin.register(Post)\nclass PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo', 'upload', 'dateCreation',\n                    'категория', 'автор'\n                    )",
+        "peekOfCode": "class FeedbackAdmin(admin.ModelAdmin):\n    list_display = ('id', 'author', 'text', 'post', 'status', 'dateCreation',)\n    search_fields = ('author', )\n    list_filter = ('status', 'dateCreation', )\n    list_editable = ('status', 'author',)\n# _______добавление команд в список действий в админке ____________\n    actions = ['make_published', 'make_withdrawn']\n    @admin.action(description='Опубликовать выбранные комментарии')\n    def make_published(self, request, queryset):\n        updated = queryset.update(status=True)",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -667,7 +1246,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class FeedbackInline(admin.TabularInline):\n    model = Feedback\n    extra = 0\n@admin.register(Post)\nclass PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo', 'upload', 'dateCreation',\n                    'категория', 'автор'\n                    )\n    list_display_links = ('id', 'title')\n    search_fields = ('title', 'text')",
+        "peekOfCode": "class FeedbackInline(admin.TabularInline):\n    model = Feedback\n    extra = 1\n@admin.register(Post)\nclass PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'category', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('category', 'author',)",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -676,7 +1255,16 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo', 'upload', 'dateCreation',\n                    'категория', 'автор'\n                    )\n    list_display_links = ('id', 'title')\n    search_fields = ('title', 'text')\n    # list_editable = ('category', ) \"\"\" пригодится, когда категория будет самостоятельной моделью\"\"\"\n    list_filter = (\n        'dateCreation',\n        # 'сategory'",
+        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'category', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('category', 'author',)\n    list_filter = ('dateCreation', )\n    prepopulated_fields = {'slug': ('title',)}\n    inlines = [FeedbackInline]\n    # @admin.display(ordering='author')",
+        "detail": "BillBoard.blogging.admin",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryAdmin",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.admin",
+        "description": "BillBoard.blogging.admin",
+        "peekOfCode": "class CategoryAdmin(admin.ModelAdmin):\n    list_display = ('id', 'name', 'slug', )\n    search_fields = ('name', )\n    list_filter = ('name', )\n    prepopulated_fields = {'slug': ('name',)}",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -685,8 +1273,17 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.apps",
         "description": "BillBoard.blogging.apps",
-        "peekOfCode": "class BloggingConfig(AppConfig):\n    # default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blogging'",
+        "peekOfCode": "class BloggingConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blogging'\n    verbose_name = 'MMORPG - Доска объявлений'",
         "detail": "BillBoard.blogging.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AddPostForm",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.forms",
+        "description": "BillBoard.blogging.forms",
+        "peekOfCode": "class AddPostForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields['author'].empty_label = 'Автор не выбран'\n        self.fields['category'].empty_label = 'Категория не выбрана'\n        self.fields['category'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle'}, size='7')\n        self.fields['author'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle',\n             'type': 'button',",
+        "detail": "BillBoard.blogging.forms",
         "documentation": {}
     },
     {
@@ -694,7 +1291,16 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Post(models.Model):\n    TYPE = (\n        ('tanks', 'Танки'),\n        ('healers', 'Хилы'),\n        ('dd', 'ДД'),\n        ('traders', 'Торговцы'),\n        ('guildmasters', 'Гильдмастера'),\n        ('questgivers', 'Квестгиверы'),\n        ('smith', 'Кузнецы'),\n        ('tanners', 'Кожевники'),",
+        "peekOfCode": "class Post(models.Model):\n    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    title = models.CharField(max_length=128, unique=True,\n                             verbose_name='Заголовок поста')\n    # slug = AutoSlugField(populate_from='title')\n    slug = models.SlugField(max_length=255, unique=True, db_index=True,\n                            verbose_name='URL', help_text=_('slug назначится автоматически'))  # default=uuid.uuid4,\n    text = models.TextField(verbose_name='Текст поста',\n                            help_text=_('Введите здесь текст своего Поста.'))\n    photo = models.ImageField(",
+        "detail": "BillBoard.blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.models",
+        "description": "BillBoard.blogging.models",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True,\n                            verbose_name='Название категории')\n    slug = models.SlugField(max_length=255, unique=True,\n                            db_index=True, verbose_name='URL')  # default=uuid.uuid4,\n    class Meta:\n        verbose_name = 'Категория'\n        verbose_name_plural = 'Категории'\n        ordering = ['name', ]\n    def __str__(self):",
         "detail": "BillBoard.blogging.models",
         "documentation": {}
     },
@@ -703,7 +1309,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Feedback(models.Model):\n    author = models.OneToOneField(CustomUser, on_delete=models.CASCADE)\n    text = models.TextField()\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)\n    status = models.BooleanField(default=False)\n    dateCreation = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f'{self.text[:10]}...'",
+        "peekOfCode": "class Feedback(models.Model):\n    author = models.OneToOneField(\n        CustomUser, on_delete=models.CASCADE, verbose_name='Автор')\n    text = models.TextField(verbose_name='Текст комментария')\n    post = models.ForeignKey(\n        Post, on_delete=models.CASCADE, verbose_name='Пост')\n    status = models.BooleanField(default=False, verbose_name='Статус')\n    dateCreation = models.DateTimeField(\n        auto_now_add=True, verbose_name='Дата создания')\n    class Meta:",
         "detail": "BillBoard.blogging.models",
         "documentation": {}
     },
@@ -712,34 +1318,88 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', index, name='home'),\n    path('cat/<str:type>', category, name='category'),\n    path('about/', about, name='about'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    # path('post/<slug:post_slug>/', show_post, name='post'),\n    # path('cat/<slug:category_slug>', PostsCategory.as_view(), name='category'),\n    path('cat/<int:cat_id>', show_category, name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    # path('post/<int:cat_id>/update/', UpdateBlog.as_view(), name='update_blog'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
+        "label": "DataMixin",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.utilities",
+        "description": "BillBoard.blogging.utilities",
+        "peekOfCode": "class DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')  # отображение всех категорий\n        # cats = Category.objects.annotate(Count('post')).order_by('name')  # для исчезновения пустых категорий\n        user_menu = menu.copy()\n        if not self.request.user.is_authenticated:\n            user_menu.pop(1)\n        # context['current_time'] = timezone.now()",
+        "detail": "BillBoard.blogging.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "BillBoard.blogging.utilities",
+        "description": "BillBoard.blogging.utilities",
+        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\nclass DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')  # отображение всех категорий",
+        "detail": "BillBoard.blogging.utilities",
+        "documentation": {}
+    },
+    {
+        "label": "PostsHome",
+        "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def index(request):\n    posts = Post.objects.all()\n    send_mail(\n        subject='Подписка на рассылку',\n        message='Вы подписались на рассылку новостей в выбранной категории',\n        from_email='gaidysheff@yandex.ru',\n        recipient_list=['gaidysheff@mail.ru', ]\n        )\n    return render(request, 'blogging/HomePage.html', {'posts': posts, 'title': 'Главная страница'})\ndef category(request, type):",
+        "peekOfCode": "class PostsHome(DataMixin, ListView):\n    model = Post\n    template_name = 'blogging/HomePage.html'\n    context_object_name = 'posts'\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=\"Главная страница\")\n        return dict(list(context.items()) + list(c_def.items()))\n    def get_queryset(self):\n        return Post.objects.all()",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
     {
-        "label": "category",
-        "kind": 2,
+        "label": "ShowPost",
+        "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def category(request, type):\n    return HttpResponse(f\"<h1>Объявы по категориям</h1><p>{type}</p>\")\ndef login(request):\n    return HttpResponse(\"<h1>Авторизация</h1>\")\ndef about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "class ShowPost(DataMixin, DetailView):\n    model = Post\n    template_name = 'blogging/post.html'\n    slug_url_kwarg = 'post_slug'\n    context_object_name = 'post'\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        context['menu'] = menu\n        context['title'] = context['post']\n        return context",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
     {
-        "label": "login",
+        "label": "LoginUser",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class LoginUser(LoginView):\n    form_class = AuthenticationForm\n    template_name = 'blogging/login.html'\n    # def get_context_data(self, *, object_list=None, **kwargs):\n    #     context = super().get_context_data(**kwargs)\n    #     c_def = self.get_user_context(title=\"Авторизация\")\n    #     return dict(list(context.items()) + list(c_def.items()))\nclass AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "AddBlog",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'\n    success_url = reverse_lazy('home')\n    login_url = reverse_lazy('home')\n    raise_exception = True\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=\"Добавление статьи\")\n        return dict(list(context.items()) + list(c_def.items()))",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateBlog",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):\n    form_class = AddPostForm\n    model = Post\n    template_name = 'blogging/updateblog.html'\n    # success_url = reverse_lazy('home')\n    # login_url = reverse_lazy('home')\n    # raise_exception = True\nclass DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):\n    model = Post\n    template_name = 'blogging/deleteblog.html'",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteBlog",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):\n    model = Post\n    template_name = 'blogging/deleteblog.html'\n    success_url = reverse_lazy('home')\ndef about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "show_category",
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def login(request):\n    return HttpResponse(\"<h1>Авторизация</h1>\")\ndef about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "def show_category(request, cat_id):\n    posts = Post.objects.filter(category=cat_id)\n    if len(posts) == 0:\n        return pageNotFound(request, exception)\n    context = {\n        'menu': menu,\n        'posts': posts,\n        'cat_selected': cat_id,\n    }\n    return render(request, 'blogging/HomePage.html', context=context)",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -771,6 +1431,15 @@
         "documentation": {}
     },
     {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\ndef show_category(request, cat_id):\n    posts = Post.objects.filter(category=cat_id)\n    if len(posts) == 0:\n        return pageNotFound(request, exception)\n    context = {",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
         "label": "Migration",
         "kind": 6,
         "importPath": "BillBoard.customuser.migrations.0001_initial",
@@ -780,12 +1449,48 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.migrations.0002_alter_customuser_options_and_more",
+        "description": "BillBoard.customuser.migrations.0002_alter_customuser_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('customuser', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='customuser',\n            options={'verbose_name': 'Пользователь', 'verbose_name_plural': 'Пользователи'},\n        ),\n        migrations.AlterField(",
+        "detail": "BillBoard.customuser.migrations.0002_alter_customuser_options_and_more",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserAdmin",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.admin",
+        "description": "BillBoard.customuser.admin",
+        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    add_form = CustomUserCreationForm\n    form = CustomUserChangeForm\n    model = CustomUser\n    list_display = ('email', 'is_staff', 'is_active', 'date_joined')\n    list_filter = ('email', 'is_staff', 'is_active',)\n    fieldsets = (\n        (None, {'fields': ('email', 'password')}),\n        ('Permissions', {'fields': ('is_staff', 'is_active')}),\n    )",
+        "detail": "BillBoard.customuser.admin",
+        "documentation": {}
+    },
+    {
         "label": "CustomuserConfig",
         "kind": 6,
         "importPath": "BillBoard.customuser.apps",
         "description": "BillBoard.customuser.apps",
-        "peekOfCode": "class CustomuserConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'customuser'",
+        "peekOfCode": "class CustomuserConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'customuser'\n    verbose_name = 'Пользователи - Кастомная Модель'",
         "detail": "BillBoard.customuser.apps",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserCreationForm",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.forms",
+        "description": "BillBoard.customuser.forms",
+        "peekOfCode": "class CustomUserCreationForm(UserCreationForm):\n    class Meta:\n        model = CustomUser\n        fields = ('email',)\nclass CustomUserChangeForm(UserChangeForm):\n    class Meta:\n        model = CustomUser\n        fields = ('email',)",
+        "detail": "BillBoard.customuser.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserChangeForm",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.forms",
+        "description": "BillBoard.customuser.forms",
+        "peekOfCode": "class CustomUserChangeForm(UserChangeForm):\n    class Meta:\n        model = CustomUser\n        fields = ('email',)",
+        "detail": "BillBoard.customuser.forms",
         "documentation": {}
     },
     {
@@ -802,7 +1507,7 @@
         "kind": 6,
         "importPath": "BillBoard.customuser.models",
         "description": "BillBoard.customuser.models",
-        "peekOfCode": "class CustomUser(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(_('email address'), unique=True)\n    is_staff = models.BooleanField(default=False)\n    is_active = models.BooleanField(default=True)\n    date_joined = models.DateTimeField(default=timezone.now)\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = []\n    objects = CustomUserManager()\n    def __str__(self):\n        return self.email",
+        "peekOfCode": "class CustomUser(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(_('email address'), unique=True)\n    is_staff = models.BooleanField(default=False, verbose_name='Персонал')\n    is_active = models.BooleanField(default=True, verbose_name='Активный')\n    date_joined = models.DateTimeField(\n        default=timezone.now, verbose_name='Дата регистрации')\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = []\n    objects = CustomUserManager()\n    class Meta:",
         "detail": "BillBoard.customuser.models",
         "documentation": {}
     },
@@ -813,6 +1518,24 @@
         "description": "BillBoard.customuser.tests",
         "peekOfCode": "class UsersManagersTests(TestCase):\n    def test_create_user(self):\n        User = get_user_model()\n        user = User.objects.create_user(\n            email='normal@user.com', password='foo')\n        self.assertEqual(user.email, 'normal@user.com')\n        self.assertTrue(user.is_active)\n        self.assertFalse(user.is_staff)\n        self.assertFalse(user.is_superuser)\n        try:",
         "detail": "BillBoard.customuser.tests",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BillBoard.customuser.urls",
+        "description": "BillBoard.customuser.urls",
+        "peekOfCode": "urlpatterns = [path('signup/', views.SignUp.as_view(), name='signup'), ]",
+        "detail": "BillBoard.customuser.urls",
+        "documentation": {}
+    },
+    {
+        "label": "SignUp",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.views",
+        "description": "BillBoard.customuser.views",
+        "peekOfCode": "class SignUp(generic.CreateView):\n    form_class = CustomUserCreationForm\n    success_url = reverse_lazy('login')\n    template_name = 'signup.html'\n    users = CustomUser.objects.all()\n    registered_user = users[len(users)-1].email\n# from urllib import request\n# from django.contrib import auth\n# auth.get_user(request).username\n# auth.get_user(request).check_password()",
+        "detail": "BillBoard.customuser.views",
         "documentation": {}
     },
     {

@@ -5,7 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.core.handlers import exception
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from django.views.generic import CreateView, DeleteView, DetailView, ListView
+from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 
 from .forms import AddPostForm
 from .models import Category, Post
@@ -114,6 +114,18 @@ class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
         c_def = self.get_user_context(title="Добавление статьи")
         return dict(list(context.items()) + list(c_def.items()))
 
+class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
+    form_class = AddPostForm
+    model = Post
+    template_name = 'blogging/updateblog.html'
+    # success_url = reverse_lazy('home')
+    # login_url = reverse_lazy('home')
+    # raise_exception = True
+
+class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
+    model = Post
+    template_name = 'blogging/deleteblog.html'
+    success_url = reverse_lazy('home')
 
 def about(request):
     return render(request, 'blogging/about.html', {'title': 'О сайте'})
