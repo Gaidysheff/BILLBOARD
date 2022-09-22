@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% load blogging_tags %}
 
 <!-- {% load i18n %}
 {% load tz %} -->
@@ -87,7 +87,11 @@
             style="width: 150px; margin-top: 15px"
             >Все категории</a
           >
-          {% endif %} {% for c in cats %}
+          {% endif %}
+          <!-- --------------------------------------           -->
+          <!-- {% show_categories %} -->
+          <!-- --------------------------------------           -->
+          {% for c in cats %}
 
           <p class="fw-light" style="margin-top: 15px">
             {% if c.pk == cat_selected %}
