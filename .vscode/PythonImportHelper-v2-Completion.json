@@ -345,6 +345,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1215,6 +1239,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0013_alter_category_slug_alter_post_slug",
+        "description": "BillBoard.blogging.migrations.0013_alter_category_slug_alter_post_slug",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0012_alter_post_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='category',\n            name='slug',\n            field=models.SlugField(max_length=255, unique=True, verbose_name='URL'),\n        ),",
+        "detail": "BillBoard.blogging.migrations.0013_alter_category_slug_alter_post_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0014_rename_category_post_cat",
+        "description": "BillBoard.blogging.migrations.0014_rename_category_post_cat",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('blogging', '0013_alter_category_slug_alter_post_slug'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='post',\n            old_name='category',\n            new_name='cat',\n        ),",
+        "detail": "BillBoard.blogging.migrations.0014_rename_category_post_cat",
+        "documentation": {}
+    },
+    {
         "label": "show_categories",
         "kind": 2,
         "importPath": "BillBoard.blogging.templatetags.blogging_tags",
@@ -1246,7 +1288,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class FeedbackInline(admin.TabularInline):\n    model = Feedback\n    extra = 1\n@admin.register(Post)\nclass PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'category', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('category', 'author',)",
+        "peekOfCode": "class FeedbackInline(admin.TabularInline):\n    model = Feedback\n    extra = 1\n@admin.register(Post)\nclass PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'cat', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('cat', 'author',)",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -1255,7 +1297,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'category', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('category', 'author',)\n    list_filter = ('dateCreation', )\n    prepopulated_fields = {'slug': ('title',)}\n    inlines = [FeedbackInline]\n    # @admin.display(ordering='author')",
+        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'cat', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('cat', 'author',)\n    list_filter = ('dateCreation', )\n    prepopulated_fields = {'slug': ('title',)}\n    inlines = [FeedbackInline]\n    # @admin.display(ordering='author')",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -1282,7 +1324,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.forms",
         "description": "BillBoard.blogging.forms",
-        "peekOfCode": "class AddPostForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields['author'].empty_label = 'Автор не выбран'\n        self.fields['category'].empty_label = 'Категория не выбрана'\n        self.fields['category'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle'}, size='7')\n        self.fields['author'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle',\n             'type': 'button',",
+        "peekOfCode": "class AddPostForm(forms.ModelForm):\n    def __init__(self, *args, **kwargs):\n        super().__init__(*args, **kwargs)\n        self.fields['author'].empty_label = 'Автор не выбран'\n        self.fields['cat'].empty_label = 'Категория не выбрана'\n        self.fields['cat'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle'}, size='7')\n        self.fields['author'].widget.attrs.update(\n            {'class': 'btn btn-secondary dropdown-toggle',\n             'type': 'button',",
         "detail": "BillBoard.blogging.forms",
         "documentation": {}
     },
@@ -1318,7 +1360,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    # path('post/<slug:post_slug>/', show_post, name='post'),\n    # path('cat/<slug:category_slug>', PostsCategory.as_view(), name='category'),\n    path('cat/<int:cat_id>', show_category, name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    # path('post/<int:cat_id>/update/', UpdateBlog.as_view(), name='update_blog'),",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    # path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    # path('category/<slug:cat_slug>', show_category, name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    # path('post/<int:cat_id>/update/', UpdateBlog.as_view(), name='update_blog'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
@@ -1327,7 +1369,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.utilities",
         "description": "BillBoard.blogging.utilities",
-        "peekOfCode": "class DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')  # отображение всех категорий\n        # cats = Category.objects.annotate(Count('post')).order_by('name')  # для исчезновения пустых категорий\n        user_menu = menu.copy()\n        if not self.request.user.is_authenticated:\n            user_menu.pop(1)\n        # context['current_time'] = timezone.now()",
+        "peekOfCode": "class DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')\n        user_menu = menu.copy()\n        if not self.request.user.is_authenticated:\n            user_menu.pop(1)\n        context['menu'] = user_menu\n        context['cats'] = cats",
         "detail": "BillBoard.blogging.utilities",
         "documentation": {}
     },
@@ -1336,7 +1378,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.utilities",
         "description": "BillBoard.blogging.utilities",
-        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\nclass DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')  # отображение всех категорий",
+        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\nclass DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')",
         "detail": "BillBoard.blogging.utilities",
         "documentation": {}
     },
@@ -1355,6 +1397,15 @@
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
         "peekOfCode": "class ShowPost(DataMixin, DetailView):\n    model = Post\n    template_name = 'blogging/post.html'\n    slug_url_kwarg = 'post_slug'\n    context_object_name = 'post'\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        context['menu'] = menu\n        context['title'] = context['post']\n        return context",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "PostsInCategory",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class PostsInCategory(DataMixin, ListView):\n    model = Post\n    template_name = 'blogging/HomePage.html'\n    context_object_name = 'posts'\n    # allow_empty = False\n    def get_queryset(self):\n        return Post.objects.filter(cat__slug=self.kwargs['cat_slug']).select_related('cat')\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c = Category.objects.get(slug=self.kwargs['cat_slug'])",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1395,15 +1446,6 @@
         "documentation": {}
     },
     {
-        "label": "show_category",
-        "kind": 2,
-        "importPath": "BillBoard.blogging.views",
-        "description": "BillBoard.blogging.views",
-        "peekOfCode": "def show_category(request, cat_id):\n    posts = Post.objects.filter(category=cat_id)\n    if len(posts) == 0:\n        return pageNotFound(request, exception)\n    context = {\n        'menu': menu,\n        'posts': posts,\n        'cat_selected': cat_id,\n    }\n    return render(request, 'blogging/HomePage.html', context=context)",
-        "detail": "BillBoard.blogging.views",
-        "documentation": {}
-    },
-    {
         "label": "about",
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
@@ -1427,15 +1469,6 @@
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
         "peekOfCode": "def pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
-        "detail": "BillBoard.blogging.views",
-        "documentation": {}
-    },
-    {
-        "label": "menu",
-        "kind": 5,
-        "importPath": "BillBoard.blogging.views",
-        "description": "BillBoard.blogging.views",
-        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\ndef show_category(request, cat_id):\n    posts = Post.objects.filter(category=cat_id)\n    if len(posts) == 0:\n        return pageNotFound(request, exception)\n    context = {",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },

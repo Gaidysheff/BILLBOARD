@@ -7,8 +7,8 @@ class AddPostForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['author'].empty_label = 'Автор не выбран'
-        self.fields['category'].empty_label = 'Категория не выбрана'
-        self.fields['category'].widget.attrs.update(
+        self.fields['cat'].empty_label = 'Категория не выбрана'
+        self.fields['cat'].widget.attrs.update(
             {'class': 'btn btn-secondary dropdown-toggle'}, size='7')
         self.fields['author'].widget.attrs.update(
             {'class': 'btn btn-secondary dropdown-toggle',
@@ -22,7 +22,7 @@ class AddPostForm(forms.ModelForm):
     class Meta:
         model = Post
         fields = ['author', 'title', 'slug',
-                  'text', 'photo', 'upload', 'category']
+                  'text', 'photo', 'upload', 'cat']
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-input', 'size': 58}),

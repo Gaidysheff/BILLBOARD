@@ -19,8 +19,7 @@ class Post(models.Model):
     photo = models.ImageField(
         upload_to="photos/%Y/%m/%d/", verbose_name='Изображение')
     upload = models.FileField(upload_to='uploads/', verbose_name='Видео файлы')
-    category = models.ForeignKey(
-        'Category', on_delete=models.CASCADE, verbose_name='Категория поста')
+    cat = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория поста')
     dateCreation = models.DateTimeField(
         auto_now_add=True, verbose_name='Дата создания')
 
@@ -72,9 +71,8 @@ class Category(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        # return reverse('category', kwargs={'сategory_slug': self.slug})
-        return reverse('category', kwargs={'cat_id': self.pk})
-        # для обычного РК
+        return reverse('category', kwargs={'cat_slug': self.slug})
+
 
 
 class Feedback(models.Model):

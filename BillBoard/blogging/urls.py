@@ -3,8 +3,8 @@ from django.urls import path
 from .views import (
     about, PostsHome,
     ShowPost,
-    show_category,
-    # PostsCategory,
+    # show_category,
+    PostsInCategory,
     AddBlog, UpdateBlog, DeleteBlog, contact, LoginUser,
     #  show_post,
 )
@@ -14,8 +14,8 @@ urlpatterns = [
     path('', PostsHome.as_view(), name='home'),
     path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),
     # path('post/<slug:post_slug>/', show_post, name='post'),
-    # path('cat/<slug:category_slug>', PostsCategory.as_view(), name='category'),
-    path('cat/<int:cat_id>', show_category, name='category'),
+    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),
+    # path('category/<slug:cat_slug>', show_category, name='category'),
     path('about/', about, name='about'),
     path('addblog/', AddBlog.as_view(), name='add_blog'),
     path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),

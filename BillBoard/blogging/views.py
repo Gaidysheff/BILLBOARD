@@ -54,42 +54,26 @@ class ShowPost(DataMixin, DetailView):
 # _________________________________________________________________
 
 
-# class PostsCategory(ListView):
-#     model = Post
-#     template_name = 'newsapp/cat_index.html'
-#     context_object_name = 'posts'
-#     allow_empty = False
-
-#     def get_context_data(self, *, object_list=None, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         c_def = self.get_user_context(title='Категория - ' + str(
-#             context['posts'][0].category), cat_selected=context['posts'][0].category_id)
-#         return dict(list(context.items()) + list(c_def.items()))
-
-#     def get_queryset(self):
-#         return Post.objects.filter(category__slug=self.kwargs['category_slug'])
 
 
-# _________________________________________________________________
-menu = [
-    {'title': "О сайте", 'url_name': 'about'},
-    {'title': "Добавить блог", 'url_name': 'add_blog'},
-    {'title': "Обратная связь", 'url_name': 'contact'},
-]
+
+class PostsInCategory(DataMixin, ListView):
+    model = Post
+    template_name = 'blogging/HomePage.html'
+    context_object_name = 'posts'
+    # allow_empty = False
+
+    def get_queryset(self):
+        return Post.objects.filter(cat__slug=self.kwargs['cat_slug']).select_related('cat')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        c = Category.objects.get(slug=self.kwargs['cat_slug'])
+        c_def = self.get_user_context(title='Категория - ' + str(c.name),
+                                      cat_selected=c.pk)
+        return dict(list(context.items()) + list(c_def.items()))
 
 
-def show_category(request, cat_id):
-    posts = Post.objects.filter(category=cat_id)
-
-    if len(posts) == 0:
-        return pageNotFound(request, exception)
-
-    context = {
-        'menu': menu,
-        'posts': posts,
-        'cat_selected': cat_id,
-    }
-    return render(request, 'blogging/HomePage.html', context=context)
 
 
 class LoginUser(LoginView):

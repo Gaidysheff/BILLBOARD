@@ -44,10 +44,10 @@ class FeedbackInline(admin.TabularInline):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug', 'text', 'photo',
-                    'upload', 'dateCreation', 'category', 'author', )
+                    'upload', 'dateCreation', 'cat', 'author', )
     list_display_links = ('id', 'title', )
     search_fields = ('title', 'text', )
-    list_editable = ('category', 'author',)
+    list_editable = ('cat', 'author',)
     list_filter = ('dateCreation', )
     prepopulated_fields = {'slug': ('title',)}
 
