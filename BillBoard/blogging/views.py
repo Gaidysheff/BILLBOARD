@@ -1,11 +1,14 @@
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.core.handlers import exception
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
+from django.views.generic import (
+    CreateView, DeleteView, DetailView, ListView,
+    UpdateView
+)
 
 from .forms import AddPostForm
 from .models import Category, Post
@@ -53,9 +56,6 @@ class ShowPost(DataMixin, DetailView):
 # _________________________________________________________________
 
 
-
-
-
 class PostsInCategory(DataMixin, ListView):
     model = Post
     template_name = 'blogging/HomePage.html'
@@ -71,8 +71,6 @@ class PostsInCategory(DataMixin, ListView):
         c_def = self.get_user_context(title='Категория - ' + str(c.name),
                                       cat_selected=c.pk)
         return dict(list(context.items()) + list(c_def.items()))
-
-
 
 
 class LoginUser(LoginView):
@@ -97,6 +95,7 @@ class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
         c_def = self.get_user_context(title="Добавление статьи")
         return dict(list(context.items()) + list(c_def.items()))
 
+
 class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
     form_class = AddPostForm
     model = Post
@@ -105,10 +104,12 @@ class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
     # login_url = reverse_lazy('home')
     # raise_exception = True
 
+
 class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     model = Post
     template_name = 'blogging/deleteblog.html'
     success_url = reverse_lazy('home')
+
 
 def about(request):
     return render(request, 'blogging/about.html', {'title': 'О сайте'})

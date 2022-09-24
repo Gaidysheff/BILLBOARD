@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -65,53 +64,49 @@
       </div>
     </nav>
 
-    <!-- Sidebar слева -->
     <!-- ------------------------------------------------------------- -->
     <!-- https://getbootstrap.com/docs/5.0/components/navbar/
      -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">    
-      {% if cat_selected == 0 %}
-          <p class="text-uppercase" style="margin-top: 15px; width: 150px; text-align: center"
-          >
-            Все категории
-          </p>
-          {% else %}
-          <a
-            href="{% url 'home' %}"
-            class="btn btn-outline-danger"
-            style="width: 150px; margin-top: 15px"
-            >Все категории</a
-          >
-          {% endif %}
+      <div class="container-fluid">
+        {% if cat_selected == 0 %}
+        <p
+          class="text-uppercase"
+          style="margin-top: 15px; width: 120px; text-align: center"
+        >
+          Все категории
+        </p>
+        {% else %}
+        <a
+          href="{% url 'home' %}"
+          class="btn btn-outline-danger"
+          style="width: 120px; margin-top: 15px"
+          >Все категории</a
+        >
+        {% endif %} {% for c in cats %}
 
-          {% for c in cats %}
+        <p class="fw-light" style="margin-top: 15px">
+          {% if c.pk == cat_selected %}
+        </p>
+        <p class="font-weight-bold" style="width: 120px; text-align: center">
+          {{c.name}}
+        </p>
+        {% else %}
+        <a
+          href="{{ c.get_absolute_url }}"
+          class="btn btn-outline-dark"
+          style="width: 120px"
+          >{{c.name}}</a
+        >
 
-          <p class="fw-light" style="margin-top: 15px; line-height: 48 px">
-            {% if c.pk == cat_selected %}
-          </p>
-          <p class="font-weight-bold" style="width: 150px; text-align: center; line-height: 48 px">
-            {{c.name}}
-          </p>
-          {% else %}
-          <a
-            href="{{ c.get_absolute_url }}"
-            class="btn btn-outline-dark"
-            style="height: 48 px; width: 150px"
-            >{{c.name}}</a
-          >
-
-          {% endif %} {% endfor %}
-        </div>
-        </nav>
-          <!-- ------------------------ конец перебора ------------------------ -->
-
-
-
-    <!-- ------------------------------------------------------------- -->
+        {% endif %} {% endfor %}
+      </div>
+    </nav>
 
     {% block content %} {%endblock content %}
+
+    <!-- ---------------------Pagination------------------------------- -->
 
     {% if page_obj.has_other_pages %}
     <nav aria-label="...">
@@ -119,29 +114,40 @@
         <!-- -------------------------------------кнопка назад---------------------------------- -->
         {% if page_obj.has_previous %}
         <li class="page-item">
-          <a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">&lt; Предыдущая</a>
+          <a
+            class="page-link"
+            href="?page={{ page_obj.previous_page_number }}"
+            tabindex="-1"
+            >&lt; Предыдущая</a
+          >
         </li>
         {% endif %}
         <!-- ----------------------Текущая +/- 1 страница ---------------------------------- -->
-        {% for p in paginator.page_range %}
-        {% if page_obj.number == p %}
-        <li class="page-item active"><a class="page-link" href="?page={{ p }}">{{ p }}<span class="sr-only"> (текущая)</span></a></li>
+        {% for p in paginator.page_range %} {% if page_obj.number == p %}
+        <li class="page-item active">
+          <a class="page-link" href="?page={{ p }}"
+            >{{ p }}<span class="sr-only"> (текущая)</span></a
+          >
+        </li>
         {% elif p >= page_obj.number|add:-1 and p <= page_obj.number|add:1 %}
         <li class="page-item">
           <a class="page-link" href="?page={{ p }}">{{ p }}</a>
         </li>
-        {% endif %}
-        {% endfor %} 
+        {% endif %} {% endfor %}
         <!-- --------------------------------------кнопка вперёд--------------------------------- -->
         {% if page_obj.has_next %}
         <li class="page-item">
-          <a class="page-link" href="?page={{ page_obj.next_page_number }}" tabindex="-1">Следующая &gt;</a>
+          <a
+            class="page-link"
+            href="?page={{ page_obj.next_page_number }}"
+            tabindex="-1"
+            >Следующая &gt;</a
+          >
         </li>
         {% endif %}
         <!-- ------------------------------------------------------------------------------------ -->
       </ul>
     </nav>
     {% endif %}
-
   </body>
 </html>

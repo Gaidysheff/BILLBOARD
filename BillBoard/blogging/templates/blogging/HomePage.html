@@ -13,12 +13,17 @@
         <div class="card-body">
           <h4 class="card-title">{{p.title}}</h4>
           <p class="card-text">{{p.text|linebreaks|truncatechars:500}}</p>
-          <a
-            href="{{ p.get_absolute_url }}"
-            target="_blank"
-            class="btn btn-outline-success"
-            >Читать пост</a
-          >
+          {% if p.upload %}
+          <img class="rounded-img" src="{{p.upload.url}}" alt="video" />
+          {% endif %}
+          <p>
+            <a
+              href="{{ p.get_absolute_url }}"
+              target="_blank"
+              class="btn btn-outline-success"
+              >Читать пост</a
+            >
+          </p>
         </div>
       </div>
     </div>
