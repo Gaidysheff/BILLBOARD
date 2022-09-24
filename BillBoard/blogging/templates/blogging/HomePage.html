@@ -14,7 +14,15 @@
           <h4 class="card-title">{{p.title}}</h4>
           <p class="card-text">{{p.text|linebreaks|truncatechars:500}}</p>
           {% if p.upload %}
-          <img class="rounded-img" src="{{p.upload.url}}" alt="video" />
+          <video
+            width="320"
+            height="240"
+            controls
+            src="{{ p.upload.url }}"
+            alt="video"
+          >
+            Your browser does not support the video tag.
+          </video>
           {% endif %}
           <p>
             <a
