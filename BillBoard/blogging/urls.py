@@ -8,7 +8,7 @@ from .views import (
     AddBlog, UpdateBlog, DeleteBlog, contact, LoginUser,
     #  show_post,
 )
-from customuser.views import SignUp
+from customuser.views import signup
 
 urlpatterns = [
     path('', PostsHome.as_view(), name='home'),
@@ -23,5 +23,5 @@ urlpatterns = [
 
     path('contact/', contact, name='contact'),
     path('login/', LoginUser.as_view(), name='login'),
-    path('signup/', SignUp.as_view(), name='signup')
+    path('signup/', signup, name='signup')
 ]

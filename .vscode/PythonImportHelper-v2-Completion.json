@@ -73,6 +73,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -90,6 +98,22 @@
     },
     {
         "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse_lazy",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -417,6 +441,30 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "django.db.models.deletion",
         "kind": 6,
         "isExtraImport": true,
@@ -441,6 +489,22 @@
         "importPath": "autoslug.fields",
         "description": "autoslug.fields",
         "detail": "autoslug.fields",
+        "documentation": {}
+    },
+    {
+        "label": "template",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
         "documentation": {}
     },
     {
@@ -516,6 +580,14 @@
         "documentation": {}
     },
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
         "label": "ValidationError",
         "importPath": "django.core.exceptions",
         "description": "django.core.exceptions",
@@ -564,7 +636,15 @@
         "documentation": {}
     },
     {
-        "label": "SignUp",
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
         "importPath": "customuser.views",
         "description": "customuser.views",
         "isExtraImport": true,
@@ -572,11 +652,99 @@
         "documentation": {}
     },
     {
-        "label": "LoginRequiredMixin",
-        "importPath": "django.contrib.auth.mixins",
-        "description": "django.contrib.auth.mixins",
+        "label": "SuccessMessageMixin",
+        "importPath": "django.contrib.messages.views",
+        "description": "django.contrib.messages.views",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.mixins",
+        "detail": "django.contrib.messages.views",
+        "documentation": {}
+    },
+    {
+        "label": "SuccessMessageMixin",
+        "importPath": "django.contrib.messages.views",
+        "description": "django.contrib.messages.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.messages.views",
+        "documentation": {}
+    },
+    {
+        "label": "Join",
+        "importPath": "newsletters.models",
+        "description": "newsletters.models",
+        "isExtraImport": true,
+        "detail": "newsletters.models",
+        "documentation": {}
+    },
+    {
+        "label": "JoinForm",
+        "importPath": "newsletters.forms",
+        "description": "newsletters.forms",
+        "isExtraImport": true,
+        "detail": "newsletters.forms",
+        "documentation": {}
+    },
+    {
+        "label": "JoinForm",
+        "importPath": "newsletters.forms",
+        "description": "newsletters.forms",
+        "isExtraImport": true,
+        "detail": "newsletters.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "CreateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -604,6 +772,14 @@
         "documentation": {}
     },
     {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
         "label": "LoginView",
         "importPath": "django.contrib.auth.views",
         "description": "django.contrib.auth.views",
@@ -621,6 +797,14 @@
     },
     {
         "label": "Http404",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
         "importPath": "django.http",
         "description": "django.http",
         "isExtraImport": true,
@@ -660,43 +844,19 @@
         "documentation": {}
     },
     {
-        "label": "DetailView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "django.views.generic",
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
-        "label": "ListView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "CreateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "DeleteView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -741,7 +901,23 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "six",
         "importPath": "django.utils",
         "description": "django.utils",
         "isExtraImport": true,
@@ -765,6 +941,30 @@
         "documentation": {}
     },
     {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordResetTokenGenerator",
+        "importPath": "django.contrib.auth.tokens",
+        "description": "django.contrib.auth.tokens",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.tokens",
+        "documentation": {}
+    },
+    {
         "label": "send_mail",
         "importPath": "django.core.mail",
         "description": "django.core.mail",
@@ -781,11 +981,75 @@
         "documentation": {}
     },
     {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
         "label": "generic",
         "importPath": "django.views",
         "description": "django.views",
         "isExtraImport": true,
         "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_site",
+        "importPath": "django.contrib.sites.shortcuts",
+        "description": "django.contrib.sites.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.contrib.sites.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "force_bytes",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "force_str",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "urlsafe_base64_decode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
+        "isExtraImport": true,
+        "detail": "django.utils.http",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "JoinView",
+        "importPath": "newsletters.views",
+        "description": "newsletters.views",
+        "isExtraImport": true,
+        "detail": "newsletters.views",
         "documentation": {}
     },
     {
@@ -856,7 +1120,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.settings",
         "description": "BillBoard.BillBoard.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'customuser',\n    'blogging.apps.BloggingConfig',\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'customuser',\n    'blogging.apps.BloggingConfig',\n    'newsletters.apps.NewslettersConfig',",
         "detail": "BillBoard.BillBoard.settings",
         "documentation": {}
     },
@@ -1108,7 +1372,7 @@
         "kind": 5,
         "importPath": "BillBoard.BillBoard.urls",
         "description": "BillBoard.BillBoard.urls",
-        "peekOfCode": "urlpatterns = [\n    # path('', TemplateView.as_view(template_name='home.html'), name='home'),\n    path('admin/', admin.site.urls),\n    path('users/', include('customuser.urls')),\n    path('users/', include('django.contrib.auth.urls')),\n    path('', include('blogging.urls')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL,\n                          document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    # path('', TemplateView.as_view(template_name='home.html'), name='home'),\n    path('admin/', admin.site.urls),\n    path('users/', include('customuser.urls')),\n    path('users/', include('django.contrib.auth.urls')),\n    path('', include('blogging.urls')),\n    path('', include('newsletters.urls')),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL,",
         "detail": "BillBoard.BillBoard.urls",
         "documentation": {}
     },
@@ -1360,7 +1624,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    # path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    # path('category/<slug:cat_slug>', show_category, name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    # path('post/<int:cat_id>/update/', UpdateBlog.as_view(), name='update_blog'),",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/',\n         UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/',\n         DeleteBlog.as_view(), name='delete_blog'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
@@ -1388,6 +1652,15 @@
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
         "peekOfCode": "class PostsHome(DataMixin, ListView):\n    model = Post\n    template_name = 'blogging/HomePage.html'\n    context_object_name = 'posts'\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=\"Главная страница\")\n        return dict(list(context.items()) + list(c_def.items()))\n    def get_queryset(self):\n        return Post.objects.all()",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "JoinView",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'\n# __________________________________________\nclass ShowPost(DataMixin, DetailView):\n    model = Post\n    template_name = 'blogging/post.html'",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1554,21 +1827,129 @@
         "documentation": {}
     },
     {
+        "label": "TokenGenerato",
+        "kind": 6,
+        "importPath": "BillBoard.customuser.token",
+        "description": "BillBoard.customuser.token",
+        "peekOfCode": "class TokenGenerator (PasswordResetTokenGenerator):\n    def _make_hash_value(self, user, timestamp):\n        return(six.text_type(user.pk) + six.text_type(timestamp) + six.text_type(user.is_active))\naccount_activation_token = TokenGenerator()",
+        "detail": "BillBoard.customuser.token",
+        "documentation": {}
+    },
+    {
+        "label": "account_activation_token",
+        "kind": 5,
+        "importPath": "BillBoard.customuser.token",
+        "description": "BillBoard.customuser.token",
+        "peekOfCode": "account_activation_token = TokenGenerator()",
+        "detail": "BillBoard.customuser.token",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "BillBoard.customuser.urls",
         "description": "BillBoard.customuser.urls",
-        "peekOfCode": "urlpatterns = [path('signup/', views.SignUp.as_view(), name='signup'), ]",
+        "peekOfCode": "urlpatterns = [\n    path('signup/', signup, name='signup'),\n    path('activate/(?P<uidb64>[0-9A-Za-z_\\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'), \n    # path('signup/', views.SignUp.as_view(), name='signup'), \n    ]",
         "detail": "BillBoard.customuser.urls",
         "documentation": {}
     },
     {
-        "label": "SignUp",
-        "kind": 6,
+        "label": "signup",
+        "kind": 2,
         "importPath": "BillBoard.customuser.views",
         "description": "BillBoard.customuser.views",
-        "peekOfCode": "class SignUp(generic.CreateView):\n    form_class = CustomUserCreationForm\n    success_url = reverse_lazy('login')\n    template_name = 'signup.html'\n    users = CustomUser.objects.all()\n    registered_user = users[len(users)-1].email\n# from urllib import request\n# from django.contrib import auth\n# auth.get_user(request).username\n# auth.get_user(request).check_password()",
+        "peekOfCode": "def signup(request): \n    if request.method == 'POST': \n        form = CustomUserCreationForm(request.POST) \n        if form.is_valid(): \n            # save form in the memory not in database \n            user = form.save(commit=False) \n            user.is_active = False \n            user.save() \n            # to get the domain of the current site \n            current_site = get_current_site(request) ",
         "detail": "BillBoard.customuser.views",
+        "documentation": {}
+    },
+    {
+        "label": "activate",
+        "kind": 2,
+        "importPath": "BillBoard.customuser.views",
+        "description": "BillBoard.customuser.views",
+        "peekOfCode": "def activate(request, uidb64, token): \n    User = get_user_model() \n    try: \n        uid = force_str(urlsafe_base64_decode(uidb64)) \n        user = User.objects.get(pk=uid) \n    except(TypeError, ValueError, OverflowError, User.DoesNotExist): \n        user = None \n    if user is not None and account_activation_token.check_token(user, token): \n        user.is_active = True \n        user.save() ",
+        "detail": "BillBoard.customuser.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.migrations.0001_initial",
+        "description": "BillBoard.newsletters.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Join',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('email', models.EmailField(max_length=254)),",
+        "detail": "BillBoard.newsletters.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "join",
+        "kind": 2,
+        "importPath": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "description": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "peekOfCode": "def join():\n    return {\"join\": JoinForm()}\n# @register.inclusion_tag('newsletters/allert_message.html')\n# def allert_message():\n#     return {\"allert_message\": get_success_message}",
+        "detail": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 5,
+        "importPath": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "description": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "peekOfCode": "register = template.Library()\n@register.inclusion_tag('newsletters/join_form.html')\ndef join():\n    return {\"join\": JoinForm()}\n# @register.inclusion_tag('newsletters/allert_message.html')\n# def allert_message():\n#     return {\"allert_message\": get_success_message}",
+        "detail": "BillBoard.newsletters.templatetags.newsletters_tags",
+        "documentation": {}
+    },
+    {
+        "label": "JoinAdmin",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.admin",
+        "description": "BillBoard.newsletters.admin",
+        "peekOfCode": "class JoinAdmin(admin.ModelAdmin):\n    list_display = ('id', 'email',  'timestamp',)",
+        "detail": "BillBoard.newsletters.admin",
+        "documentation": {}
+    },
+    {
+        "label": "NewslettersConfig",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.apps",
+        "description": "BillBoard.newsletters.apps",
+        "peekOfCode": "class NewslettersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'newsletters'\n    verbose_name = 'Подписчики на новостную рассылку'",
+        "detail": "BillBoard.newsletters.apps",
+        "documentation": {}
+    },
+    {
+        "label": "JoinForm",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.forms",
+        "description": "BillBoard.newsletters.forms",
+        "peekOfCode": "class JoinForm(forms.ModelForm):\n    email = forms.EmailField(\n        label='Your email',\n        widget=forms.EmailInput(attrs={\n            'class': 'form-input',\n            'size': 30,\n            'placeholder': \"Your email ...\",\n        }))\n    class Meta:\n        model = Join",
+        "detail": "BillBoard.newsletters.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Join",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.models",
+        "description": "BillBoard.newsletters.models",
+        "peekOfCode": "class Join(models.Model):\n    email = models.EmailField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    class Meta:\n        verbose_name = 'Подписчик'\n        verbose_name_plural = 'Подписчики'\n        ordering = ['email', ]\n    def __str__(self):\n        return self.email",
+        "detail": "BillBoard.newsletters.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BillBoard.newsletters.urls",
+        "description": "BillBoard.newsletters.urls",
+        "peekOfCode": "urlpatterns = [\n    path('join', JoinView.as_view(), name=\"join\"),\n]",
+        "detail": "BillBoard.newsletters.urls",
+        "documentation": {}
+    },
+    {
+        "label": "JoinView",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.views",
+        "description": "BillBoard.newsletters.views",
+        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'\n# # функция для (FormView)\n#     def from_valid(self, form):\n#         email = form.cleaned_data.get('email')\n#         return super(JoinView, self).form_valid(form)",
+        "detail": "BillBoard.newsletters.views",
         "documentation": {}
     },
     {
