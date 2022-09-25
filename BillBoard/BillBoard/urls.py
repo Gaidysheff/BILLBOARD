@@ -29,6 +29,7 @@ urlpatterns = [
     path('users/', include('customuser.urls')),
     path('users/', include('django.contrib.auth.urls')),
     path('', include('blogging.urls')),
+    path('', include('newsletters.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,3 +1,7 @@
+from django.contrib.messages.views import SuccessMessageMixin
+from newsletters.models import Join
+from newsletters.forms import JoinForm
+from django.views.generic import CreateView
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
@@ -7,7 +11,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import (
     CreateView, DeleteView, DetailView, ListView,
-    UpdateView
+    UpdateView,
 )
 
 from .forms import AddPostForm
@@ -27,6 +31,19 @@ class PostsHome(DataMixin, ListView):
 
     def get_queryset(self):
         return Post.objects.all()
+
+# __________________________________________
+
+
+class JoinView(SuccessMessageMixin, CreateView):
+    model = Join
+    form_class = JoinForm
+    success_url = reverse_lazy('home')
+
+    def get_success_message(self, cleaned_data):
+        return 'Thank you for joining'
+
+# __________________________________________
 
 
 class ShowPost(DataMixin, DetailView):
