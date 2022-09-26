@@ -1,15 +1,15 @@
 <hr />
 <a
   class="btn btn-default"
-  href="{% url 'beets:add_comment_to_beet' object.id %}"
+  href="{% url 'post:add_comment_to_post' object.id %}"
 >
   Add comment</a
 >
 {% for comment in object.comment.all %}
 <div class="comment">
-  <div class="date">{{ comment.created_date }}</div>
+  <div class="date">{{ comment.dateCreation }}</div>
   <strong>{{ comment.author }}</strong>
-  <p>{{ comment.content|linebreaks }}</p>
+  <p>{{ comment.text|linebreaks }}</p>
 </div>
 {% empty %}
 <p>No comments here yet :(</p>

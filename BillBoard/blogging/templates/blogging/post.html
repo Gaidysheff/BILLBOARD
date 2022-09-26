@@ -29,7 +29,7 @@
           </p>
           <!-- ------------------------------- -->
           <a
-            href="{{ add_comment_to_post.url }}"
+            href="{% url 'comment' post.id %}"
             target="_blank"
             class="btn btn-info"
             >Комментировать</a

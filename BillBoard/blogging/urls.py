@@ -20,8 +20,7 @@ urlpatterns = [
          UpdateBlog.as_view(), name='update_blog'),
     path('post/<slug:post_slug>/delete/',
          DeleteBlog.as_view(), name='delete_blog'),
-    path('post/<slug:post_slug>/comment/',
-         add_comment_to_post, name='add_comment_to_post'),
+    path('post/<slug:post_slug>/comment/', add_comment_to_post, name='comment'),
 
     path('contact/', contact, name='contact'),
     path('login/', LoginUser.as_view(), name='login'),

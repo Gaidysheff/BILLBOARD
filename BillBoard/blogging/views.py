@@ -128,15 +128,15 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     success_url = reverse_lazy('home')
 
 
-def add_comment_to_post(request, id):
+def add_comment_to_post(request, post_slug):
     if request.method == "POST":
         user = request.user
-        post = get_object_or_404(post, pk=id)
+        post = get_object_or_404(Post, slug=post_slug)
         form = CommentForm(request.POST, instance=post)
         if form.is_valid():
             comment = form.save(commit=False)
             comment.author = user
-            comment.beet = post
+            comment.post = post
             comment.save()
             form.save()
             return redirect('post:post-detail', post.id)
