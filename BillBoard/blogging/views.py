@@ -14,7 +14,7 @@ from django.views.generic import (
     UpdateView,
 )
 
-from .forms import AddPostForm
+from .forms import AddPostForm, CommentForm
 from .models import Category, Post
 from .utilities import DataMixin
 
@@ -126,6 +126,23 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     model = Post
     template_name = 'blogging/deleteblog.html'
     success_url = reverse_lazy('home')
+
+
+def add_comment_to_post(request, id):
+    if request.method == "POST":
+        user = request.user
+        post = get_object_or_404(post, pk=id)
+        form = CommentForm(request.POST, instance=post)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.author = user
+            comment.beet = post
+            comment.save()
+            form.save()
+            return redirect('post:post-detail', post.id)
+    else:
+        form = CommentForm()
+    return render(request, 'blogging/add_comment_to_post.html', {'form': form})
 
 
 def about(request):

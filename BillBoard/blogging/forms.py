@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Feedback
 from django.core.exceptions import ValidationError
 
 
@@ -47,3 +47,10 @@ class AddPostForm(forms.ModelForm):
                 "Заголовок не должен быть идентичен тексту поста.")
 
         return cleaned_data
+
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Feedback
+        fields = ['text']
