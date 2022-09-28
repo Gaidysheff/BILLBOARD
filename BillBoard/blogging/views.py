@@ -15,7 +15,7 @@ from django.views.generic import (
 )
 
 from .forms import AddPostForm, CommentForm
-from .models import Category, Post
+from .models import Category, Post, Feedback
 from .utilities import DataMixin
 
 
@@ -139,10 +139,19 @@ def add_comment_to_post(request, post_slug):
             comment.post = post
             comment.save()
             form.save()
-            return redirect('post:post-detail', post.id)
+            return redirect('blogging:post_detail')  # post.id
     else:
         form = CommentForm()
     return render(request, 'blogging/add_comment_to_post.html', {'form': form})
+
+
+class FeedbackList(DataMixin, ListView):
+    model = Feedback
+    template_name = 'blogging/feedback_list.html'
+    context_object_name = 'feedback_list'
+
+    def get_queryset(self):
+        return Feedback.objects.all()
 
 
 def about(request):

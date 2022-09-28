@@ -1,4 +1,4 @@
-{% extends 'blogging/base.html' %} {% block content %}
+{% extends 'blogging/base.html' %} {% load blogging_tags %} {% block content %}
 
 <div class="container">
   <div class="row">
@@ -41,5 +41,8 @@
     </div>
   </div>
 </div>
-
-{% endblock %}
+<h1>Комментарии:</h1>
+{% get_feedback as feedback %} {% for f in feedback %}
+<p>{{f.author}} | {{f.dateCreation}}</p>
+<h4>{{f.text}}</h4>
+{% endfor %} {% endblock %}

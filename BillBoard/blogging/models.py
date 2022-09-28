@@ -19,7 +19,8 @@ class Post(models.Model):
     photo = models.ImageField(
         upload_to="photos/%Y/%m/%d/", verbose_name='Изображение')
     upload = models.FileField(upload_to='uploads/', verbose_name='Видео файлы')
-    cat = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория поста')
+    cat = models.ForeignKey(
+        'Category', on_delete=models.CASCADE, verbose_name='Категория поста')
     dateCreation = models.DateTimeField(
         auto_now_add=True, verbose_name='Дата создания')
 
@@ -74,7 +75,6 @@ class Category(models.Model):
         return reverse('category', kwargs={'cat_slug': self.slug})
 
 
-
 class Feedback(models.Model):
     author = models.OneToOneField(
         CustomUser, on_delete=models.CASCADE, verbose_name='Автор')
@@ -88,6 +88,10 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+
+    def approve(self):
+        self.approved_feedback = True
+        self.save()
 
     def __str__(self):
         return f'{self.text[:10]}...'

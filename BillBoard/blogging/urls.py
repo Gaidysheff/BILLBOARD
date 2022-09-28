@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import (
     about, PostsHome,
-    ShowPost,
+    ShowPost, FeedbackList,
     # show_category,
     PostsInCategory, add_comment_to_post,
     AddBlog, UpdateBlog, DeleteBlog, contact, LoginUser,
@@ -13,6 +13,7 @@ from customuser.views import signup
 urlpatterns = [
     path('', PostsHome.as_view(), name='home'),
     path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),
+    path('feedback/', FeedbackList.as_view(), name='feedback'),
     path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),
     path('about/', about, name='about'),
     path('addblog/', AddBlog.as_view(), name='add_blog'),

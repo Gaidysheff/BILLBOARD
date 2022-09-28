@@ -1,16 +1,16 @@
 <hr />
 <a
   class="btn btn-default"
-  href="{% url 'post:add_comment_to_post' object.id %}"
+  href="{% url 'blogging:add_comment_to_post' slug=post_slug %}"
 >
   Add comment</a
 >
-{% for comment in object.comment.all %}
+{% for feedback in post.feedbacks.all %}
 <div class="comment">
-  <div class="date">{{ comment.dateCreation }}</div>
-  <strong>{{ comment.author }}</strong>
-  <p>{{ comment.text|linebreaks }}</p>
+  <div class="date">{{ feedback.dateCreation }}</div>
+  <strong>{{ feedback.author }}</strong>
+  <p>{{ feedback.text|linebreaks }}</p>
 </div>
 {% empty %}
-<p>No comments here yet :(</p>
+<p>No feedback here yet :(</p>
 {% endfor %}

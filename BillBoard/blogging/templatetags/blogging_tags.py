@@ -1,5 +1,5 @@
 from django import template
-from blogging.models import Category
+from blogging.models import Category, Feedback, Post
 
 
 register = template.Library()
@@ -13,3 +13,8 @@ def show_categories(sort=None, cat_selected=0):
         cats = Category.objects.order_by(sort)
 
     return {'cats': cats, 'cat_selected': cat_selected}
+
+
+@register.simple_tag()
+def get_feedback():
+    return Post.objects.get(id=2).feedback_set.all()
