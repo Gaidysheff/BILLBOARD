@@ -1,0 +1,41 @@
+{% extends 'blogging/base.html' %} {% block content %}
+
+<!-- -------------------------------------------------------------- -->
+<div class="col-md-8 card mb-4 mt-3">
+  <div class="card-body">
+    <!-- comments -->
+    <h2>{{ feedbacks.count }} feedbacks</h2>
+
+    <h1>Комментарии: (NEW)</h1>
+
+    {% for feedback in feedbacks %}
+    <div class="comments" style="padding: 10px">
+      <p class="font-weight-bold">
+        {{ feedback.author }}
+        <span class="text-muted font-weight-normal">
+          {{ comment.dateCreation }}
+        </span>
+      </p>
+      {{ comment.text | linebreaks }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- ----------------- a user makes a new comment ------------ -->
+<div class="col-md-8 card mb-4 mt-3">
+  <div class="card-body">
+    {% if new_feedback %}
+    <div class="alert alert-success" role="alert">
+      Your feedback is awaiting moderation
+    </div>
+    {% else %}
+    <h3>Leave a feedback</h3>
+    <form method="post" style="margin-top: 1.3em">
+      {{ feedback_form.as_p }} {% csrf_token %}
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}

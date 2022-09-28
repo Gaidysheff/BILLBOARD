@@ -80,7 +80,7 @@ class Feedback(models.Model):
         CustomUser, on_delete=models.CASCADE, verbose_name='Автор')
     text = models.TextField(verbose_name='Текст комментария')
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, verbose_name='Пост')
+        Post, on_delete=models.CASCADE, verbose_name='Пост', related_name='feedbacks')
     status = models.BooleanField(default=False, verbose_name='Статус')
     dateCreation = models.DateTimeField(
         auto_now_add=True, verbose_name='Дата создания')
@@ -88,6 +88,7 @@ class Feedback(models.Model):
     class Meta:
         verbose_name = 'Комментарий'
         verbose_name_plural = 'Комментарии'
+        ordering = ['dateCreation']
 
     def approve(self):
         self.approved_feedback = True

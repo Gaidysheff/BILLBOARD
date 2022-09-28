@@ -16,7 +16,7 @@ from django.views.generic import (
 
 from .forms import AddPostForm, CommentForm
 from .models import Category, Post, Feedback
-from .utilities import DataMixin
+from .utilities import DataMixin, menu
 
 
 class PostsHome(DataMixin, ListView):
@@ -46,30 +46,46 @@ class JoinView(SuccessMessageMixin, CreateView):
 # __________________________________________
 
 
-class ShowPost(DataMixin, DetailView):
-    model = Post
-    template_name = 'blogging/post.html'
-    slug_url_kwarg = 'post_slug'
-    context_object_name = 'post'
+# class ShowPost(DataMixin, DetailView):
+#     model = Post
+#     template_name = 'blogging/post.html'
+#     slug_url_kwarg = 'post_slug'
+#     context_object_name = 'post'
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        c_def = self.get_user_context(title=context['post'])
-        return dict(list(context.items()) + list(c_def.items()))
-
+#     def get_context_data(self, *, object_list=None, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         c_def = self.get_user_context(title=context['post'])
+#         return dict(list(context.items()) + list(c_def.items()))
 
 # _________________________________________________________________
-# def show_post(request, post_slug):
-#     post = get_object_or_404(Post, slug=post_slug)
+def show_post(request, post_slug):
+    post = get_object_or_404(Post, slug=post_slug)
+    feedbacks = post.feedbacks.filter(status=True)
+    new_feedback = None
+    # Comment posted
+    if request.method == 'POST':
+        feedback_form = CommentForm(data=request.POST)
+        if feedback_form.is_valid():
+            # Create Comment object but don't save to database yet
+            new_feedback = feedback_form.save(commit=False)
+            # Assign the current post to the comment
+            new_feedback.post = post
+            # Save the comment to the database
+            new_feedback.save()
+    else:
+        feedback_form = CommentForm()
 
-#     context = {
-#         'menu': menu,
-#         'post': post,
-#         'title': post.title,
-#         'cat_selected': post.category_id,
-#     }
-#     return render(request, 'blogging/post.html', context=context)
+    context = {
+        'menu': menu,
+        'post': post,
+        'title': post.title,
+        'cat_selected': post.cat_id,
+        'feedbacks': feedbacks,
+        'new_feedback': new_feedback,
+        'feedback_form': feedback_form,
+    }
 
+    return render(request, 'blogging/post.html', context=context)
 # _________________________________________________________________
 
 
@@ -144,6 +160,30 @@ def add_comment_to_post(request, post_slug):
         form = CommentForm()
     return render(request, 'blogging/add_comment_to_post.html', {'form': form})
 
+# ---------------------------------------------------------------------------
+
+
+def feedback_to_post(request, post_slug):
+    post = get_object_or_404(Post, slug=post_slug)
+    feedbacks = post.feedbacks.filter(status=True)
+    new_feedback = None
+    # Comment posted
+    if request.method == 'POST':
+        feedback_form = CommentForm(data=request.POST)
+        if feedback_form.is_valid():
+
+            # Create Comment object but don't save to database yet
+            new_feedback = feedback_form.save(commit=False)
+            # Assign the current post to the comment
+            new_feedback.post = post
+            # Save the comment to the database
+            new_feedback.save()
+    else:
+        feedback_form = CommentForm()
+    return render(request, 'blogging/post.html', {'post': post, 'feedbacks': feedbacks, 'new_feedback': new_feedback, 'feedback_form': feedback_form})
+
+
+# ---------------------------------------------------------------------------
 
 class FeedbackList(DataMixin, ListView):
     model = Feedback

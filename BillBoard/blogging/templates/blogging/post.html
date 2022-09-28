@@ -41,8 +41,48 @@
     </div>
   </div>
 </div>
-<h1>Комментарии:</h1>
+<!-- <h1>Комментарии:</h1>
 {% get_feedback as feedback %} {% for f in feedback %}
 <p>{{f.author}} | {{f.dateCreation}}</p>
 <h4>{{f.text}}</h4>
-{% endfor %} {% endblock %}
+{% endfor %}  -->
+
+<!-- -------------------------------------------------------------- -->
+<div class="col-md-8 card mb-4 mt-3">
+  <div class="card-body">
+    <!-- comments -->
+    <h4>{{ feedbacks.count }} комментариев</h4>
+
+    <h1>Комментарии к этому посту:</h1>
+
+    {% for feedback in feedbacks %}
+    <div class="comments" style="padding: 10px">
+      <p class="font-weight-bold">
+        {{ feedback.author }}
+        <span class="text-muted font-weight-normal">
+          {{ comment.dateCreation }}
+        </span>
+      </p>
+      {{ comment.text | linebreaks }}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- ----------------- a user makes a new comment ------------ -->
+<div class="col-md-8 card mb-4 mt-3">
+  <div class="card-body">
+    {% if new_feedback %}
+    <div class="alert alert-success" role="alert">
+      Your feedback is awaiting moderation
+    </div>
+    {% else %}
+    <h3>Оставить комментарий</h3>
+    <form method="post" style="margin-top: 1.3em">
+      {{ feedback_form.as_p }} {% csrf_token %}
+      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+    {% endif %}
+  </div>
+</div>
+
+{% endblock content %}

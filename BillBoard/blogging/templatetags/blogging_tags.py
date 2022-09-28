@@ -17,4 +17,4 @@ def show_categories(sort=None, cat_selected=0):
 
 @register.simple_tag()
 def get_feedback():
-    return Post.objects.get(id=2).feedback_set.all()
+    return Post.objects.get(id=2).feedbacks.all()
