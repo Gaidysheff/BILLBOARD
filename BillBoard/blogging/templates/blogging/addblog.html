@@ -1,36 +1,45 @@
-{% extends 'blogging/base.html' %} {% block content %}
+{% extends 'blogging/base.html' %}
+<br />
+{% block title %}Добавление поста{% endblock title %}
+<br />
+{% block content %}
 
 <div class="container">
   <div
     class="badge bg-success text-wrap"
-    style="width: 40rem; font-size: 3em; padding: 0.2em; font-weight: 300"
+    style="width: 50rem; font-size: 3em; padding: 0.2em; font-weight: 300"
   >
-    {{title}}
+    Добавить блог
   </div>
   <p></p>
-  <form
-    action="{% url 'add_blog' %}"
-    method="post"
-    enctype="multipart/form-data"
-  >
-    {% csrf_token %}
+  <div class="form-group">
+    <form
+      action="{% url 'add_blog' %}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
 
-    <div class="form-error">{{ form.non_field_errors }}</div>
+      <div class="form-error">{{ form.non_field_errors }}</div>
 
-    {% for f in form %}
+      {% for f in form %}
 
-    <p>
-      <label class="form-label" style="width: 10rem" for="{{ f.id_for_label }}"
-        >{{f.label}}:</label
-      >
-      {{f}}
-    </p>
+      <p>
+        <label
+          class="form-label"
+          style="width: 10rem"
+          for="{{ f.id_for_label }}"
+          >{{f.label}}:</label
+        >
+        {{f}}
+      </p>
 
-    <div class="form-error">{{ f.errors }}</div>
-    {% endfor %}
+      <div class="form-error">{{ f.errors }}</div>
+      {% endfor %}
 
-    <button type="submit" class="btn btn-success">Добавить</button>
-  </form>
+      <button type="submit" class="btn btn-success">Добавить</button>
+    </form>
+  </div>
 </div>
 
 {% endblock content %}

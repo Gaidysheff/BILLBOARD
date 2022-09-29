@@ -125,17 +125,20 @@ class LoginUser(LoginView):
     #     return dict(list(context.items()) + list(c_def.items()))
 
 
-class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
+class AddBlog(LoginRequiredMixin, CreateView):
+    model = Post
     form_class = AddPostForm
     template_name = 'blogging/addblog.html'
-    success_url = reverse_lazy('home')
-    login_url = reverse_lazy('home')
-    raise_exception = True
+    # fields = ['author', 'title', 'slug', 'text', 'photo', 'upload', 'cat']
 
-    def get_context_data(self, *, object_list=None, **kwargs):
-        context = super().get_context_data(**kwargs)
-        c_def = self.get_user_context(title="Добавление статьи")
-        return dict(list(context.items()) + list(c_def.items()))
+    # success_url = reverse_lazy('home')
+    # login_url = reverse_lazy('home')
+    # raise_exception = True
+
+    # def get_context_data(self, *, object_list=None, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     c_def = self.get_user_context(title="Добавление статьи")
+    #     return dict(list(context.items()) + list(c_def.items()))
 
 
 class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
@@ -177,26 +180,31 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
 #         return super().delete(*args, **kwargs)
 
 # -------------------------------------------------------------------------------
+# --------------Список постов для пользователя---------------------------
+
+# class UserPosts(LoginRequiredMixin, DataMixin, ListView):
+#     model = Post
+#     template_name = "blogging/user_post_list.html"
+
+#     def get_queryset(self):
+#         try:
+#             self.post_user = User.objects.prefetch_related("posts").get(
+#                 username__iexact=self.kwargs.get("username")
+#             )
+#         except User.DoesNotExist:
+#             raise Http404
+#         else:
+#             return self.post_user.posts.all()
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context["post_user"] = self.post_user
+#         return context
 
 
-class UserPosts(LoginRequiredMixin, DataMixin, ListView):
-    model = Post
-    template_name = "blogging/user_post_list.html"
+# -------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
-    def get_queryset(self):
-        try:
-            self.post_user = User.objects.prefetch_related("posts").get(
-                username__iexact=self.kwargs.get("username")
-            )
-        except User.DoesNotExist:
-            raise Http404
-        else:
-            return self.post_user.posts.all()
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context["post_user"] = self.post_user
-        return context
 
 # def add_comment_to_post(request, post_slug):
 #     if request.method == "POST":

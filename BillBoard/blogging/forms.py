@@ -21,13 +21,12 @@ class AddPostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ['author', 'title', 'slug',
-                  'text', 'photo', 'upload', 'cat']
+        fields = ['author', 'title', 'slug', 'text', 'photo', 'upload', 'cat']
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-input', 'size': 58}),
-            'slug': forms.URLInput(attrs={'size': 58}),
-            'text': forms.Textarea(attrs={'cols': 60, 'rows': 7}),
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            # 'slug': forms.URLInput(attrs={'class': 'form-control', 'size': 58}),
+            'text': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
     def clean(self):
