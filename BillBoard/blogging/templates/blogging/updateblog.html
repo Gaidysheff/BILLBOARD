@@ -1,4 +1,7 @@
-{% extends 'blogging/base.html' %} {% block content %}
+{% extends 'blogging/base.html' %} {% block content %} {% if
+user.is_authenticated %} {% if user.if == post.author.id %}
+<h1>Update Post</h1>
+<br /><br />
 
 <div class="container">
   <div
@@ -14,23 +17,19 @@
     enctype="multipart/form-data"
   >
     {% csrf_token %}
-
     <div class="form-error">{{ form.non_field_errors }}</div>
-
     {% for f in form %}
-
     <p>
       <label class="form-label" style="width: 10rem" for="{{ f.id_for_label }}"
         >{{f.label}}:</label
       >
       {{f}}
     </p>
-
     <div class="form-error">{{ f.errors }}</div>
     {% endfor %}
-
     <button type="submit" class="btn btn-success">Изменить</button>
   </form>
 </div>
 
-{% endblock content %}
+{% else %} Your're not allowed here (and you know it...) {% endif %} {% else %}
+Your're not allowed here (and you know it...) {% endif %} {% endblock content %}

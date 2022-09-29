@@ -1,0 +1,16 @@
+{% extends 'blogging/base.html' %} {% block title %}Удаление поста{% endblock %}
+{% block content %} {% if user.is_authenticated %} {% if user.if ==
+post.author.id %}
+<h1>Удалить пост ...</h1>
+<br /><br />
+<h3>Удалить: {{ post.title }}</h3>
+<br />
+<div class="form-group">
+  <form method="post">
+    {% csrf_token %}
+    <strong>Вы уверены ???</strong><br /><br />
+    <button class="btn btn-danger">Удалить</button>
+  </form>
+</div>
+{% else %} Your're not allowed here (and you know it...) {% endif %} {% else %}
+Your're not allowed here (and you know it...) {% endif %} {% endblock content %}

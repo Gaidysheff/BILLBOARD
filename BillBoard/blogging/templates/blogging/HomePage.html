@@ -6,7 +6,15 @@
     <div class="col" style="padding-top: 20px">
       <div class="card">
         <h5>Категория: {{p.cat}}</h5>
-        <p>"Дата: {{p.dateCreation|date:"d-m-Y H:i:s"}}</p>
+        <p>Дата: {{p.dateCreation|date:"d-m-Y H:i:s"}}</p>
+
+        <small>
+          {% if user.is_authenticated %} {% if user.if == post.author.id %}
+          <a href="#" target="_blank">| Изменить</a>
+          <a href="#">| Удалить |</a>
+          {% endif %} {% endif %} </small
+        ><br />
+
         {% if p.photo %}
         <img class="rounded-img" src="{{p.photo.url}}" alt="image" />
         {% endif %}

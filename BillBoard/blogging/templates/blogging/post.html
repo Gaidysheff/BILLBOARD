@@ -15,6 +15,7 @@
         {% endif %}
         <div class="card-body">
           <h4 class="card-title">{{post.title}}</h4>
+          <p>Автор поста: {{ post.author }}</p>
           <p class="card-text">{{post.text|linebreaks}}</p>
           {% if post.upload %}
           <video
@@ -32,9 +33,12 @@
             <a href="#"> Share this post </a>
           </p>
           <!-- ------------------------------- -->
-
-          <a href="#" target="_blank" class="btn btn-warning">Изменить</a>
+          {% if user.is_authenticated %} {% if user.if == post.author.id %}
+          <a href=" url 'update_blog' " target="_blank" class="btn btn-warning"
+            >Изменить</a
+          >
           <a href="#" class="btn btn-danger">Удалить</a>
+          {% endif %} {% endif %}
         </div>
       </div>
     </div>
@@ -50,14 +54,16 @@
     <h1>Комментарии к этому посту:</h1>
 
     {% for feedback in feedbacks %}
-    <div class="comments" style="padding: 10px">
-      <p class="font-weight-bold">
-        {{ feedback.author }} |
-        <span class="text-muted font-weight-normal">
-          {{ feedback.dateCreation }}
-        </span>
-      </p>
-      {{ feedback.text | linebreaks }}
+    <div class="col-md-8 card mb-4 mt-3">
+      <div class="card-body">
+        <p class="font-weight-bold">
+          {{ feedback.author }} |
+          <span class="text-muted font-weight-normal">
+            {{ feedback.dateCreation }}
+          </span>
+        </p>
+        {{ feedback.text | linebreaks }}
+      </div>
     </div>
     {% endfor %}
   </div>
