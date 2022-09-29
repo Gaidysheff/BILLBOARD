@@ -1,21 +1,19 @@
-from django.contrib.messages.views import SuccessMessageMixin
-from newsletters.models import Join
-from newsletters.forms import JoinForm
-from django.views.generic import CreateView
+from django.core.mail import send_mail
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
+from django.contrib.messages.views import SuccessMessageMixin
 from django.core.handlers import exception
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
-from django.views.generic import (
-    CreateView, DeleteView, DetailView, ListView,
-    UpdateView,
-)
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
+from newsletters.forms import JoinForm
+from newsletters.models import Join
 
 from .forms import AddPostForm, CommentForm
-from .models import Category, Post, Feedback
+from .models import Category, Feedback, Post
 from .utilities import DataMixin, menu
 
 
@@ -84,6 +82,19 @@ def show_post(request, post_slug):
         'new_feedback': new_feedback,
         'feedback_form': feedback_form,
     }
+    post_author = post.author
+    print(post_author)
+    _a = Feedback.objects.all()
+    _au = _a[len(_a)-1]
+    feedback_author = _au.author
+    print(feedback_author)
+
+    send_mail(
+        subject=f'Feedbak for { post } received',
+        message=f'Получен отклик на Ваш пост "{ post }" от { feedback_author }',
+        from_email='gaidysheff@yandex.ru',
+        recipient_list=['gaidysheff@mail.ru', {feedback_author}]
+    )
 
     return render(request, 'blogging/post.html', context=context)
 # _________________________________________________________________
