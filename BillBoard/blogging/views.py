@@ -125,13 +125,18 @@ class LoginUser(LoginView):
     #     return dict(list(context.items()) + list(c_def.items()))
 
 
-class AddBlog(LoginRequiredMixin, CreateView):
+class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
     model = Post
     form_class = AddPostForm
     template_name = 'blogging/addblog.html'
     success_url = reverse_lazy('home')
     login_url = reverse_lazy('home')
     raise_exception = True
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        c_def = self.get_user_context(title="Добавить пост")
+        return dict(list(context.items()) + list(c_def.items()))
 
 
 class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
