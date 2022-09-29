@@ -53,4 +53,4 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Feedback
-        fields = ['text']
+        fields = ['author', 'text', 'status']

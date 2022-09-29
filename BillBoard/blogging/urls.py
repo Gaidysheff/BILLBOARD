@@ -5,7 +5,8 @@ from .views import (
     # ShowPost,
     FeedbackList,
     # show_category,
-    PostsInCategory, add_comment_to_post, feedback_to_post,
+    PostsInCategory,
+    #  add_comment_to_post, feedback_to_post,
     AddBlog, UpdateBlog, DeleteBlog, contact, LoginUser,
     show_post,
 )
@@ -16,7 +17,7 @@ urlpatterns = [
     # path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),
     path('post/<slug:post_slug>/', show_post, name='post'),
 
-    path('<slug:post_slug>/', feedback_to_post, name='new_feedback'),
+    # path('<slug:post_slug>/', feedback_to_post, name='new_feedback'),
 
     path('feedback/', FeedbackList.as_view(), name='feedback'),
     path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),
@@ -26,7 +27,7 @@ urlpatterns = [
          UpdateBlog.as_view(), name='update_blog'),
     path('post/<slug:post_slug>/delete/',
          DeleteBlog.as_view(), name='delete_blog'),
-    path('post/<slug:post_slug>/comment/', add_comment_to_post, name='comment'),
+    # path('post/<slug:post_slug>/comment/', add_comment_to_post, name='comment'),
 
 
     path('contact/', contact, name='contact'),

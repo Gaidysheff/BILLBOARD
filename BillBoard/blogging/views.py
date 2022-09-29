@@ -144,43 +144,43 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     success_url = reverse_lazy('home')
 
 
-def add_comment_to_post(request, post_slug):
-    if request.method == "POST":
-        user = request.user
-        post = get_object_or_404(Post, slug=post_slug)
-        form = CommentForm(request.POST, instance=post)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.author = user
-            comment.post = post
-            comment.save()
-            form.save()
-            return redirect('blogging:post_detail')  # post.id
-    else:
-        form = CommentForm()
-    return render(request, 'blogging/add_comment_to_post.html', {'form': form})
+# def add_comment_to_post(request, post_slug):
+#     if request.method == "POST":
+#         user = request.user
+#         post = get_object_or_404(Post, slug=post_slug)
+#         form = CommentForm(request.POST, instance=post)
+#         if form.is_valid():
+#             comment = form.save(commit=False)
+#             comment.author = user
+#             comment.post = post
+#             comment.save()
+#             form.save()
+#             return redirect('blogging:post_detail')  # post.id
+#     else:
+#         form = CommentForm()
+#     return render(request, 'blogging/add_comment_to_post.html', {'form': form})
 
 # ---------------------------------------------------------------------------
 
 
-def feedback_to_post(request, post_slug):
-    post = get_object_or_404(Post, slug=post_slug)
-    feedbacks = post.feedbacks.filter(status=True)
-    new_feedback = None
-    # Comment posted
-    if request.method == 'POST':
-        feedback_form = CommentForm(data=request.POST)
-        if feedback_form.is_valid():
+# def feedback_to_post(request, post_slug):
+#     post = get_object_or_404(Post, slug=post_slug)
+#     feedbacks = post.feedbacks.filter(status=True)
+#     new_feedback = None
+#     # Comment posted
+#     if request.method == 'POST':
+#         feedback_form = CommentForm(data=request.POST)
+#         if feedback_form.is_valid():
 
-            # Create Comment object but don't save to database yet
-            new_feedback = feedback_form.save(commit=False)
-            # Assign the current post to the comment
-            new_feedback.post = post
-            # Save the comment to the database
-            new_feedback.save()
-    else:
-        feedback_form = CommentForm()
-    return render(request, 'blogging/post.html', {'post': post, 'feedbacks': feedbacks, 'new_feedback': new_feedback, 'feedback_form': feedback_form})
+#             # Create Comment object but don't save to database yet
+#             new_feedback = feedback_form.save(commit=False)
+#             # Assign the current post to the comment
+#             new_feedback.post = post
+#             # Save the comment to the database
+#             new_feedback.save()
+#     else:
+#         feedback_form = CommentForm()
+#     return render(request, 'blogging/post.html', {'post': post, 'feedbacks': feedbacks, 'new_feedback': new_feedback, 'feedback_form': feedback_form})
 
 
 # ---------------------------------------------------------------------------
