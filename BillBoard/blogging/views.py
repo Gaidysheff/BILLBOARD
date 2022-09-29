@@ -82,18 +82,16 @@ def show_post(request, post_slug):
         'new_feedback': new_feedback,
         'feedback_form': feedback_form,
     }
-    post_author = post.author
-    print(post_author)
+    post_author = post.author.email
     _a = Feedback.objects.all()
     _au = _a[len(_a)-1]
     feedback_author = _au.author
-    print(feedback_author)
 
     send_mail(
         subject=f'Feedbak for { post } received',
         message=f'Получен отклик на Ваш пост "{ post }" от { feedback_author }',
         from_email='gaidysheff@yandex.ru',
-        recipient_list=['gaidysheff@mail.ru', {feedback_author}]
+        recipient_list=['gaidysheff@mail.ru', str(post_author)]
     )
 
     return render(request, 'blogging/post.html', context=context)
