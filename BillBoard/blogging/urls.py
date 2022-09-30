@@ -9,6 +9,8 @@ from .views import (
     #  add_comment_to_post, feedback_to_post,
     AddBlog, UpdateBlog, DeleteBlog, contact, LoginUser,
     show_post,
+    # UserPosts,
+    post_comments_user,
 )
 from customuser.views import signup
 
@@ -29,6 +31,7 @@ urlpatterns = [
          DeleteBlog.as_view(), name='delete_blog'),
     # path('post/<slug:post_slug>/comment/', add_comment_to_post, name='comment'),
 
+    path('userposts/', post_comments_user, name='userposts'),
 
     path('contact/', contact, name='contact'),
     path('login/', LoginUser.as_view(), name='login'),

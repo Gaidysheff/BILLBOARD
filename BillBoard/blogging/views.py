@@ -1,9 +1,14 @@
-from django.core.mail import send_mail
+from multiprocessing import context
+
+from customuser.models import CustomUser
+
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.handlers import exception
+from django.core.mail import send_mail
 from django.http import Http404, HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
@@ -180,33 +185,60 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
 # -------------------------------------------------------------------------------
 # --------------Список постов для пользователя---------------------------
 
+
 # class UserPosts(LoginRequiredMixin, DataMixin, ListView):
 #     model = Post
 #     template_name = "blogging/user_post_list.html"
 
 #     def get_queryset(self):
-#         try:
-#             self.post_user = User.objects.prefetch_related("posts").get(
-#                 username__iexact=self.kwargs.get("username")
-#             )
-#         except User.DoesNotExist:
-#             raise Http404
-#         else:
-#             return self.post_user.posts.all()
+#         return Post.objects.filter(author=user)
 
 #     def get_context_data(self, **kwargs):
+#         # Call the base implementation first to get the context
 #         context = super().get_context_data(**kwargs)
-#         context["post_user"] = self.post_user
+#         # Create any data and add it to the context
+#         context['some_data'] = 'This is just some data'
 #         return context
 
+    # def get_queryset(self):
+    #     try:
+    #         self.post_user = CustomUser.objects.prefetch_related("posts").get(
+    #             email__iexact=self.kwargs.get("email")
+    #         )
+    #     except CustomUser.DoesNotExist:
+    #         raise Http404
+    #     else:
+    #         return self.post_user.posts.all()
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context["post_user"] = self.post_user
+    #     return context
+# -------------------------------------------------------------------------------
+
+@login_required
+def post_comments_user(request, user):
+    userpost = Post.objects.filter(author=user)
+    num_comments = Feedback.objects.filter(post=userpost)
+
+    context = {
+        'userpost': userpost,
+        'num_comments': num_comments,
+    }
+
+    return render(request, 'blogging/user_post_list.html', context)
+
+#     logged_in_user = request.user
+#     logged_in_user_posts = Post.objects.filter(author=author)
+
+#     return render(request, 'blogging/user_post_list.html', {'posts': logged_in_user_posts})
 
 # -------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
 
 # def add_comment_to_post(request, post_slug):
-#     if request.method == "POST":
-#         user = request.user
+#     if request.method == "POST":#         user = request.user
 #         post = get_object_or_404(Post, slug=post_slug)
 #         form = CommentForm(request.POST, instance=post)
 #         if form.is_valid():
