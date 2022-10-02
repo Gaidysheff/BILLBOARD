@@ -5,8 +5,6 @@ from django.template.loader import render_to_string
 
 from .models import Feedback, Post
 
-from .models import Feedback, Post
-
 
 @receiver(post_save, sender=Post)
 def notify_post(sender, instance, created, **kwargs):
@@ -20,21 +18,14 @@ def notify_post(sender, instance, created, **kwargs):
             },
         )
 
+        _post = Post.objects.all()
+        post = _post[len(_post)-1]
+
         msg = EmailMultiAlternatives(
-            subject=f'New post',
+            subject=f'Новая статья от автора { post.author } из категории { post.cat }',
             from_email='gaidysheff@yandex.ru',
-            to=[user.email, 'gaidysheff@mail.ru']
+            to=['gaidysheff@mail.ru', user.email]
         )
 
         msg.attach_alternative(html, 'text/html')
         msg.send()
-
-
-#     if created:
-#         subject = f'Опубликован новый пост "{instance.post.title}" {instance.date.strftime("%d %m %Y")}'
-#     else:
-#         subject = f'Пост "{instance.post.title}" изменён {instance.date.strftime("%d %m %Y")}'
-#     mail_managers(
-#         subject=subject,
-#         message=instance.message,
-#     )

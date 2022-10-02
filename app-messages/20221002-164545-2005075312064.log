@@ -1,0 +1,38 @@
+Content-Type: multipart/alternative;
+ boundary="===============1640751534419901559=="
+MIME-Version: 1.0
+Subject: New post
+From: gaidysheff@yandex.ru
+To: user5@example.com, gaidysheff@mail.ru
+Date: Sun, 02 Oct 2022 11:45:45 -0000
+Message-ID: <166471114537.12740.11530573195754915329@GAMEPC>
+
+--===============1640751534419901559==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Новость</title>
+  </head>
+  <body>
+    <h1>
+      Новая статья от автора  из категории 
+    </h1>
+    <p></p>
+
+    <p>
+      <a href="http://127.0.0.1:8000"
+        >Перейти на статью</a
+      >
+    </p>
+  </body>
+</html>
+
+--===============1640751534419901559==--
+
+-------------------------------------------------------------------------------
