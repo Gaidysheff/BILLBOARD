@@ -8,7 +8,8 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Post(models.Model):
-    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    author = models.ForeignKey(
+        CustomUser, on_delete=models.CASCADE, related_name='posts')
     title = models.CharField(max_length=128, unique=True,
                              verbose_name='Заголовок поста')
     # slug = AutoSlugField(populate_from='title')
