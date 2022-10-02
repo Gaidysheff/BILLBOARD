@@ -1,0 +1,72 @@
+{% extends 'base.html' %} {% block title %} {{ post.title }} | {{post.category}}
+{% endblock title %} {% block content %}
+<div class="container">
+  <div class="card p-2">
+    <div class="card-header">
+      <h3 class="card-title">{{ post.title }}</h3>
+
+      <span class="badge bg-secondary float-end">{{ post.category }}</span>
+
+      <small class="text-muted ms-1">
+        <b> published by: </b>
+        <span class="fst-italic"> </span>
+
+        <span class="fst-italic">{{ post.author }}</span>
+
+        <b> on: </b>
+        <span class="fst-italic"> {{ post.datetime}} </span>
+      </small>
+    </div>
+
+    <div class="card-body">
+      <p class="card-text">{{ post.text|truncatewords:50}}</p>
+    </div>
+  </div>
+
+  {% for feedback in feedbacks %}
+  <div class="shadow-sm p-3 my-2 bg-body rounded">
+    <div class="d-flex justify-content-between p-1">
+      <h5 class="mb-1">{{ feedback.author }}</h5>
+
+      <small class="text-muted">Submitted on: {{ feedback.datetime }}</small>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-sm-12">
+        <p class="ms-3">{{ feedback.text }}</p>
+      </div>
+
+      <div class="col-lg-2 col-sm-12">
+        <div
+          class="d-flex flex-md-row flex-lg-column align-items-lg-end justify-content-end gap-1"
+        >
+          {% if feedback.status %}
+
+          <button class="btn btn-outline-success">Accepted</button>
+          {%else %}
+          <a href="#">
+            <button class="btn btn-success">Accept</button>
+          </a>
+          {% endif %} {% if not feedback.status and not feedback.status is None
+          %}
+
+          <button class="btn btn-outline-warning text-dark">Rejected</button>
+          {%else%}
+          <a href="#">
+            <button class="btn btn-warning">Reject</button>
+          </a>
+          {% endif %}
+          <a href="#">
+            <button class="btn btn-danger">Delete</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% empty %}
+  <div class="text-center">
+    <h3 class="fw-bold">No feedbacks yet</h3>
+    <p class="lead">Check later and keep posting!</p>
+  </div>
+</div>
+
+{% endfor %} {% endblock content %}

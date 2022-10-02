@@ -1,18 +1,15 @@
 from multiprocessing import context
 
-from customuser.models import CustomUser
-
-from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.core.handlers import exception
 from django.core.mail import send_mail
-from django.http import Http404, HttpResponse
-from django.shortcuts import get_object_or_404, redirect, render
+from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
-from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+from django.views import View
+from django.views.generic import (CreateView, DeleteView, ListView,
                                   UpdateView)
 from newsletters.forms import JoinForm
 from newsletters.models import Join
@@ -35,8 +32,6 @@ class PostsHome(DataMixin, ListView):
     def get_queryset(self):
         return Post.objects.all()
 
-# __________________________________________
-
 
 class JoinView(SuccessMessageMixin, CreateView):
     model = Join
@@ -46,34 +41,17 @@ class JoinView(SuccessMessageMixin, CreateView):
     def get_success_message(self, cleaned_data):
         return 'Thank you for joining'
 
-# __________________________________________
 
-
-# class ShowPost(DataMixin, DetailView):
-#     model = Post
-#     template_name = 'blogging/post.html'
-#     slug_url_kwarg = 'post_slug'
-#     context_object_name = 'post'
-
-#     def get_context_data(self, *, object_list=None, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         c_def = self.get_user_context(title=context['post'])
-#         return dict(list(context.items()) + list(c_def.items()))
-
-# _________________________________________________________________
 def show_post(request, post_slug):
     post = get_object_or_404(Post, slug=post_slug)
     feedbacks = post.feedbacks.filter(status=True)
     new_feedback = None
-    # Comment posted
+
     if request.method == 'POST':
         feedback_form = CommentForm(data=request.POST)
         if feedback_form.is_valid():
-            # Create Comment object but don't save to database yet
             new_feedback = feedback_form.save(commit=False)
-            # Assign the current post to the comment
             new_feedback.post = post
-            # Save the comment to the database
             new_feedback.save()
     else:
         feedback_form = CommentForm()
@@ -100,7 +78,6 @@ def show_post(request, post_slug):
     )
 
     return render(request, 'blogging/post.html', context=context)
-# _________________________________________________________________
 
 
 class PostsInCategory(DataMixin, ListView):
@@ -124,11 +101,6 @@ class LoginUser(LoginView):
     form_class = AuthenticationForm
     template_name = 'blogging/login.html'
 
-    # def get_context_data(self, *, object_list=None, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     c_def = self.get_user_context(title="Авторизация")
-    #     return dict(list(context.items()) + list(c_def.items()))
-
 
 class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
     model = Post
@@ -148,73 +120,12 @@ class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
     form_class = AddPostForm
     model = Post
     template_name = 'blogging/updateblog.html'
-    # success_url = reverse_lazy('home')
-    # login_url = reverse_lazy('home')
-    # raise_exception = True
-
-# ------------------- Рассмотреть блок ниже ------------------------
-
-    # def form_valid(self, form):
-    #     self.object = form.save(commit=False)
-    #     self.object.user = self.request.user
-    #     self.object.save()
-    #     return super().form_valid(form)
-
-# --------------------------------------------------------------
 
 
 class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     model = Post
     template_name = 'blogging/deleteblog.html'
     success_url = reverse_lazy('home')
-
-# ------------------- Рассмотреть блок ниже ------------------------
-# class DeletePost(LoginRequiredMixin, SelectRelatedMixin, generic.DeleteView):
-#     model = models.Post
-#     select_related = ("user", "group")
-#     success_url = reverse_lazy("posts:all")
-
-#     def get_queryset(self):
-#         queryset = super().get_queryset()
-#         return queryset.filter(user_id=self.request.user.id)
-
-#     def delete(self, *args, **kwargs):
-#         messages.success(self.request, "Post Deleted")
-#         return super().delete(*args, **kwargs)
-
-# -------------------------------------------------------------------------------
-# --------------Список постов для пользователя---------------------------
-
-
-# class UserPosts(LoginRequiredMixin, DataMixin, ListView):
-#     model = Post
-#     template_name = "blogging/user_post_list.html"
-
-#     def get_queryset(self):
-#         return Post.objects.filter(author=user)
-
-#     def get_context_data(self, **kwargs):
-#         # Call the base implementation first to get the context
-#         context = super().get_context_data(**kwargs)
-#         # Create any data and add it to the context
-#         context['some_data'] = 'This is just some data'
-#         return context
-
-    # def get_queryset(self):
-    #     try:
-    #         self.post_user = CustomUser.objects.prefetch_related("posts").get(
-    #             email__iexact=self.kwargs.get("email")
-    #         )
-    #     except CustomUser.DoesNotExist:
-    #         raise Http404
-    #     else:
-    #         return self.post_user.posts.all()
-
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     context["post_user"] = self.post_user
-    #     return context
-# -------------------------------------------------------------------------------
 
 
 def post_comments_user(request, user):
@@ -228,54 +139,6 @@ def post_comments_user(request, user):
     pass
     return render(request, 'blogging/user_post_list.html', context)
 
-#     logged_in_user = request.user
-#     logged_in_user_posts = Post.objects.filter(author=author)
-
-#     return render(request, 'blogging/user_post_list.html', {'posts': logged_in_user_posts})
-
-# -------------------------------------------------------------------------------
-# -------------------------------------------------------------------------------
-
-
-# def add_comment_to_post(request, post_slug):
-#     if request.method == "POST":#         user = request.user
-#         post = get_object_or_404(Post, slug=post_slug)
-#         form = CommentForm(request.POST, instance=post)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.author = user
-#             comment.post = post
-#             comment.save()
-#             form.save()
-#             return redirect('blogging:post_detail')  # post.id
-#     else:
-#         form = CommentForm()
-#     return render(request, 'blogging/add_comment_to_post.html', {'form': form})
-
-# ---------------------------------------------------------------------------
-
-
-# def feedback_to_post(request, post_slug):
-#     post = get_object_or_404(Post, slug=post_slug)
-#     feedbacks = post.feedbacks.filter(status=True)
-#     new_feedback = None
-#     # Comment posted
-#     if request.method == 'POST':
-#         feedback_form = CommentForm(data=request.POST)
-#         if feedback_form.is_valid():
-
-#             # Create Comment object but don't save to database yet
-#             new_feedback = feedback_form.save(commit=False)
-#             # Assign the current post to the comment
-#             new_feedback.post = post
-#             # Save the comment to the database
-#             new_feedback.save()
-#     else:
-#         feedback_form = CommentForm()
-#     return render(request, 'blogging/post.html', {'post': post, 'feedbacks': feedbacks, 'new_feedback': new_feedback, 'feedback_form': feedback_form})
-
-
-# ---------------------------------------------------------------------------
 
 class FeedbackList(DataMixin, ListView):
     model = Feedback
@@ -296,3 +159,19 @@ def contact(request):
 
 def pageNotFound(request, exception):
     return render(request, 'blogging/PageNotFound.html')
+
+
+# from .utils.permissions import IsAuthorMixin, NotIsAuthorMixin
+# IsAuthorMixin
+class FeedbacksList(View):
+    def get(self, request, *args, **kwargs):
+        post_slug = self.kwargs['post_slug']
+        post = Post.objects.get(slug=post_slug)
+        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)
+
+        context = {
+            'feedbacks': queryset,
+            'post': post
+        }
+
+        return render(request, 'blogging/feedbacks_list.html', context)

@@ -1,6 +1,7 @@
 from django import forms
-from .models import Post, Feedback
 from django.core.exceptions import ValidationError
+
+from .models import Feedback, Post
 
 
 class AddPostForm(forms.ModelForm):

@@ -1,29 +1,27 @@
 {% extends 'blogging/base.html' %} {% block content %}
 
+<form
+  action="views.add_comment_to_post"
+  method="post"
+  enctype="multipart/form-data"
+>
+  {% csrf_token %}
 
-  <form
-    action="views.add_comment_to_post"
-    method="post"
-    enctype="multipart/form-data"
-  >
-    {% csrf_token %}
+  <div class="form-error">{{ form.non_field_errors }}</div>
 
-    <div class="form-error">{{ form.non_field_errors }}</div>
+  {% for f in form %}
 
-    {% for f in form %}
+  <p>
+    <label class="form-label" style="width: 10rem" for="{{ f.id_for_label }}"
+      >{{f.label}}:</label
+    >
+    {{f}}
+  </p>
 
-    <p>
-      <label class="form-label" style="width: 10rem" for="{{ f.id_for_label }}"
-        >{{f.label}}:</label
-      >
-      {{f}}
-    </p>
+  <div class="form-error">{{ f.errors }}</div>
+  {% endfor %}
 
-    <div class="form-error">{{ f.errors }}</div>
-    {% endfor %}
-
-    <button type="submit" class="btn btn-success">Добавить</button>
-  </form>
-</div>
+  <button type="submit" class="btn btn-success">Добавить</button>
+</form>
 
 {% endblock content %}

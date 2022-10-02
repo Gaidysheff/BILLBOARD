@@ -4,7 +4,7 @@ menu = [
     {'title': "О сайте", 'url_name': 'about'},
     {'title': "Добавить блог", 'url_name': 'add_blog'},
     {'title': "Обратная связь", 'url_name': 'contact'},
-    {'title': "Мои посты и коменты к ним", 'url_name': 'userposts'},
+    {'title': "Мои посты и коменты к ним", 'url_name': 'feedback_list'},
 ]
 
 

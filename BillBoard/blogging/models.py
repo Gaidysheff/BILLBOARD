@@ -1,9 +1,6 @@
-import uuid
-from autoslug import AutoSlugField
 from customuser.models import CustomUser
 from django.db import models
 from django.urls import reverse
-from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 
 
@@ -12,9 +9,8 @@ class Post(models.Model):
         CustomUser, on_delete=models.CASCADE, related_name='posts')
     title = models.CharField(max_length=128, unique=True,
                              verbose_name='Заголовок поста')
-    # slug = AutoSlugField(populate_from='title')
     slug = models.SlugField(max_length=255, unique=True, db_index=True,
-                            verbose_name='URL', help_text=_('slug назначится автоматически'))  # default=uuid.uuid4,
+                            verbose_name='URL', help_text=_('slug назначится автоматически'))
     text = models.TextField(verbose_name='Текст поста',
                             help_text=_('Введите здесь текст своего Поста.'))
     photo = models.ImageField(
@@ -36,34 +32,15 @@ class Post(models.Model):
     def preview(self):
         return '{} ... {}'.format(self.text[0:123], str(self.rating))
 
-    # def save(self,  *args, **kwargs):
-    #     self.slug = slugify(self.title)
-    #     return super(Post, self).save(*args, **kwargs)
-
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
-        # return reverse('post', kwargs={'post_id': self.pk})
-        # return reverse('post', args=(str(self.id)))
-
-    # TYPE = (
-    #     ('tanks', 'Танки'),
-    #     ('healers', 'Хилы'),
-    #     ('dd', 'ДД'),
-    #     ('traders', 'Торговцы'),
-    #     ('guildmasters', 'Гильдмастера'),
-    #     ('questgivers', 'Квестгиверы'),
-    #     ('smith', 'Кузнецы'),
-    #     ('tanners', 'Кожевники'),
-    #     ('potionmakers', 'Зельевары'),
-    #     ('spellmasters', 'Мастера заклинаний'),
-    # )
 
 
 class Category(models.Model):
     name = models.CharField(max_length=64, unique=True,
                             verbose_name='Название категории')
     slug = models.SlugField(max_length=255, unique=True,
-                            db_index=True, verbose_name='URL')  # default=uuid.uuid4,
+                            db_index=True, verbose_name='URL')
 
     class Meta:
         verbose_name = 'Категория'

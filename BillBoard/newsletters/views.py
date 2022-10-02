@@ -13,8 +13,3 @@ class JoinView(SuccessMessageMixin, CreateView):
 
     def get_success_message(self, cleaned_data):
         return 'Thank you for joining'
-
-# # функция для (FormView)
-#     def from_valid(self, form):
-#         email = form.cleaned_data.get('email')
-#         return super(JoinView, self).form_valid(form)

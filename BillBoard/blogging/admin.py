@@ -53,14 +53,6 @@ class PostAdmin(admin.ModelAdmin):
 
     inlines = [FeedbackInline]
 
-    # @admin.display(ordering='author')
-    # def автор(self, obj):
-    #     return obj.author
-
-    # @admin.display(ordering='-category')
-    # def категория(self, obj):
-    #     return obj.category
-
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
