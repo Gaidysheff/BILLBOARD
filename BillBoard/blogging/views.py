@@ -216,16 +216,16 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     #     return context
 # -------------------------------------------------------------------------------
 
-@login_required
+
 def post_comments_user(request, user):
-    userpost = Post.objects.filter(author=user)
-    num_comments = Feedback.objects.filter(post=userpost)
+    # userpost = Post.objects.filter(author=user)
+    # num_comments = Feedback.objects.filter(post=userpost)
 
-    context = {
-        'userpost': userpost,
-        'num_comments': num_comments,
-    }
-
+    # context = {
+    #     'userpost': userpost,
+    #     'num_comments': num_comments,
+    # }
+    pass
     return render(request, 'blogging/user_post_list.html', context)
 
 #     logged_in_user = request.user
