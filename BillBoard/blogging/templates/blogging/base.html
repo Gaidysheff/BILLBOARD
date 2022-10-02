@@ -44,23 +44,33 @@
             <li class="nav-item active">
               <a class="nav-link" href="{% url m.url_name %}">{{m.title}}</a>
             </li>
-            {% endfor %} {% if request.user.is_authenticated %}
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'logout' %}"
-                >{{ user.username }} | Выйти</a
-              >
-            </li>
-            {% else %}
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'signup' %}">| Регистрация</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'login' %}">| Войти</a>
-            </li>
-            {% endif %}
+            {% endfor %}
           </ul>
           {% endblock mainmenu %}
         </div>
+      </div>
+      <div>
+        <ul id="mainmenu" class="navbar-nav ml-auto">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'logout' %}"
+              >{{ user.username }} Выйти</a
+            >
+          </li>
+          {% else %}
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'signup' %}">Регистрация</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'login' %}">| Войти</a>
+          </li>
+          {% endif %}
+          <li class="nav-item active">
+            <a class="nav-link">| {{ user.email }}</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
