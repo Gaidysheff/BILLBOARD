@@ -1,3 +1,4 @@
+from blogging.utils.permissions import IsAuthorMixin, NotIsAuthorMixin
 from multiprocessing import context
 
 from django.contrib.auth.forms import AuthenticationForm
@@ -161,9 +162,7 @@ def pageNotFound(request, exception):
     return render(request, 'blogging/PageNotFound.html')
 
 
-# from .utils.permissions import IsAuthorMixin, NotIsAuthorMixin
-# IsAuthorMixin
-class FeedbacksList(View):
+class FeedbacksList(View):  # IsAuthorMixin,
     def get(self, request, *args, **kwargs):
         post_slug = self.kwargs['post_slug']
         post = Post.objects.get(slug=post_slug)
@@ -173,5 +172,6 @@ class FeedbacksList(View):
             'feedbacks': queryset,
             'post': post
         }
+        context['title'] = "Приватно для пользователя"
 
         return render(request, 'blogging/feedbacks_list.html', context)

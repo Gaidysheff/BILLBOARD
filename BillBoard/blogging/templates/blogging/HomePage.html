@@ -7,14 +7,22 @@
       <div class="card">
         <h5>Категория: {{p.cat}}</h5>
         <p>Дата: {{p.dateCreation|date:"d-m-Y H:i:s"}}</p>
-
+        <small class="text-muted ms-1">
+          <b> Автор поста: </b>
+          <span class="fst-italic"> </span>
+          <span class="fst-italic">{{ p.author }}</span>
+          <br />
+        </small>
+        {% if user.is_authenticated %} {% if user.id == p.author.id %}
+        <a class="nav-link" href="{% url 'feedback_list' p.slug %}"
+          >МОЯ ПРИВАТНАЯ СТРАНИЦА (Это мой пост и коменты к нему)</a
+        >
         <small>
-          {% if user.is_authenticated %} {% if user.if == post.author.id %}
           <a href="#" target="_blank">| Изменить</a>
           <a href="#">| Удалить |</a>
-          {% endif %} {% endif %} </small
-        ><br />
-
+          {% endif %} {% endif %}
+        </small>
+        <br />
         {% if p.photo %}
         <img class="rounded-img" src="{{p.photo.url}}" alt="image" />
         {% endif %}

@@ -1,11 +1,10 @@
-{% extends 'base.html' %} {% block title %} {{ post.title }} | {{post.category}}
-{% endblock title %} {% block content %}
+{% extends 'blogging/base.html' %} {% block content %}
 <div class="container">
   <div class="card p-2">
     <div class="card-header">
       <h3 class="card-title">{{ post.title }}</h3>
 
-      <span class="badge bg-secondary float-end">{{ post.category }}</span>
+      <span class="badge bg-secondary float-end">{{ post.cat }}</span>
 
       <small class="text-muted ms-1">
         <b> published by: </b>
@@ -14,7 +13,7 @@
         <span class="fst-italic">{{ post.author }}</span>
 
         <b> on: </b>
-        <span class="fst-italic"> {{ post.datetime}} </span>
+        <span class="fst-italic"> {{ post.dateCreation}} </span>
       </small>
     </div>
 
@@ -42,15 +41,16 @@
           {% if feedback.status %}
 
           <button class="btn btn-outline-success">Accepted</button>
-          {%else %}
+          {% else %}
           <a href="#">
             <button class="btn btn-success">Accept</button>
           </a>
-          {% endif %} {% if not feedback.status and not feedback.status is None
-          %}
+          {% endif %}
+          <br />
+          {% if not feedback.status and not feedback.status is None%}
 
           <button class="btn btn-outline-warning text-dark">Rejected</button>
-          {%else%}
+          {% else %}
           <a href="#">
             <button class="btn btn-warning">Reject</button>
           </a>
