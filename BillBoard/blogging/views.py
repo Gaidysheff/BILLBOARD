@@ -7,7 +7,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.core.mail import send_mail
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import (CreateView, DeleteView, ListView,
@@ -162,7 +162,7 @@ def pageNotFound(request, exception):
     return render(request, 'blogging/PageNotFound.html')
 
 
-class FeedbacksList(View):  # IsAuthorMixin,
+class FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,
     def get(self, request, *args, **kwargs):
         post_slug = self.kwargs['post_slug']
         post = Post.objects.get(slug=post_slug)
@@ -175,3 +175,38 @@ class FeedbacksList(View):  # IsAuthorMixin,
         context['title'] = "Приватно для пользователя"
 
         return render(request, 'blogging/feedbacks_list.html', context)
+
+
+class FeedbackAccept(IsAuthorMixin, View):
+    def get(self, request, *args, **kwargs):
+        feedback_pk = kwargs['feedback_pk']
+
+        feedback = Feedback.objects.get(pk=feedback_pk)
+        feedback.approved = True
+        feedback.save()
+
+        return redirect(request.META['HTTP_REFERER'])
+
+
+class FeedbackReject(IsAuthorMixin, View):
+    def get(self, request, *args, **kwargs):
+        feedback_pk = kwargs['feedback_pk']
+
+        feedback = Feedback.objects.get(pk=feedback_pk)
+        feedback.approved = False
+        feedback.save()
+
+        return redirect(request.META['HTTP_REFERER'])
+
+
+class FeedbackDelete(LoginRequiredMixin, DeleteView):
+    model = Feedback
+    template_name = 'blogging/feedback_delete.html'
+    success_url = 'home'
+    permission_required = ('blogging.feedback_delete')
+    context_object_name = 'feedback'
+
+    def get_object(self, **kwargs):
+        feedback_id = self.kwargs.get('feedback_pk')
+        feedback = Feedback.objects.get(pk=feedback_id)
+        return feedback

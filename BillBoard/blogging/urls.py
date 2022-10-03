@@ -2,6 +2,7 @@ from django.urls import path
 
 from .views import (about, PostsHome, FeedbackList, PostsInCategory, AddBlog, UpdateBlog,
                     DeleteBlog, contact, LoginUser, show_post, post_comments_user, FeedbacksList,
+                    FeedbackAccept, FeedbackReject, FeedbackDelete
                     )
 from customuser.views import signup
 
@@ -18,8 +19,17 @@ urlpatterns = [
     path('feedback/', FeedbackList.as_view(), name='feedback'),
     path('<slug:post_slug>/feedbacks/',
          FeedbacksList.as_view(), name='feedback_list'),
+
+    path('<slug:post_slug>/feedbacks/<int:feedback_pk>/accept',
+         FeedbackAccept.as_view(), name='feedback_accept'),
+    path('<slug:post_slug>/feedbacks/<int:feedback_pk>/reject',
+         FeedbackReject.as_view(), name='feedback_reject'),
+    path('feedbacks/<int:feedback_pk>/delete',
+         FeedbackDelete.as_view(), name='feedback_delete'),
+
     path('login/', LoginUser.as_view(), name='login'),
     path('signup/', signup, name='signup'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
+
 ]

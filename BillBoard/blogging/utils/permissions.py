@@ -5,6 +5,12 @@ from blogging.models import Post
 
 class IsAuthorMixin(LoginRequiredMixin):
 
+    def get_slug_list(self, dict_):
+        slugs = []
+        for slug in dict_:
+            slugs.append(slug.get('slug'))
+        return slugs
+
     def get_pk_list(self, dict_):
         pks = []
         for pk in dict_:
@@ -15,18 +21,18 @@ class IsAuthorMixin(LoginRequiredMixin):
         if not request.user.is_authenticated:
             return self.handle_no_permission()
 
-        post_pk = kwargs.get('post_pk')
+        post_slug = kwargs.get('post_slug')
         feedback_pk = kwargs.get('feedback_pk')
 
-        if post_pk:
-            pks_dict = request.user.post_set.all().values('pk')
-            if post_pk not in self.get_pk_list(pks_dict):
+        if post_slug:
+            slugs_dict = request.user.posts.all().values('slug')
+            if post_slug not in self.get_slug_list(slugs_dict):
                 return self.handle_no_permission()
 
             return super().dispatch(request, *args, **kwargs)
 
         elif feedback_pk:
-            pks_dict = request.customuser.feedback_set.all().values('pk')
+            pks_dict = request.user.feedback_set.all().values('pk')
 
             if feedback_pk not in self.get_pk_list(pks_dict):
                 return self.handle_no_permission()
@@ -41,9 +47,9 @@ class NotIsAuthorMixin(LoginRequiredMixin):
         if not request.user.is_authenticated:
             return self.handle_no_permission()
 
-        post = Post.objects.filter(pk=kwargs.get('post_pk')).first()
+        post = Post.objects.filter(slug=kwargs.get('post_slug')).first()
 
         if post:
-            if post in request.user.post_set.all():
-                return redirect('post_list')
+            if post in request.user.posts.all():
+                return redirect('post')
         return super().dispatch(request, *args, **kwargs)
