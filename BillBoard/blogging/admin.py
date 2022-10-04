@@ -6,10 +6,11 @@ from .models import Category, Feedback, Post
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
-    list_display = ('id', 'author', 'text', 'post', 'status', 'dateCreation',)
+    list_display = ('id', 'author', 'text', 'post',
+                    'approved', 'dateCreation',)
     search_fields = ('author', )
-    list_filter = ('status', 'dateCreation', )
-    list_editable = ('status', 'author',)
+    list_filter = ('approved', 'dateCreation', )
+    list_editable = ('approved', 'author',)
 
 # _______добавление команд в список действий в админке ____________
 
@@ -17,7 +18,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
     @admin.action(description='Опубликовать выбранные комментарии')
     def make_published(self, request, queryset):
-        updated = queryset.update(status=True)
+        updated = queryset.update(approved=True)
         self.message_user(request, ngettext(
             '%d комментарий был отмечен как "Опубликован".',
             '%d комментарии были отмечены как "Опубликованные".',
@@ -26,7 +27,7 @@ class FeedbackAdmin(admin.ModelAdmin):
 
     @admin.action(description='Отправить выбранные комментарии в архив')
     def make_withdrawn(self, request, queryset):
-        updated = queryset.update(status=False)
+        updated = queryset.update(approved=False)
         self.message_user(request, ngettext(
             '%d комментарий был отправлен в черновик.',
             '%d комментарии были отправлены в черновик.',

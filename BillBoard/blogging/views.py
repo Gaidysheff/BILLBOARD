@@ -45,7 +45,7 @@ class JoinView(SuccessMessageMixin, CreateView):
 
 def show_post(request, post_slug):
     post = get_object_or_404(Post, slug=post_slug)
-    feedbacks = post.feedbacks.filter(status=True)
+    feedbacks = post.feedbacks.filter(approved=True)
     new_feedback = None
 
     if request.method == 'POST':
@@ -127,18 +127,6 @@ class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
     model = Post
     template_name = 'blogging/deleteblog.html'
     success_url = reverse_lazy('home')
-
-
-def post_comments_user(request, user):
-    # userpost = Post.objects.filter(author=user)
-    # num_comments = Feedback.objects.filter(post=userpost)
-
-    # context = {
-    #     'userpost': userpost,
-    #     'num_comments': num_comments,
-    # }
-    pass
-    return render(request, 'blogging/user_post_list.html', context)
 
 
 class FeedbackList(DataMixin, ListView):

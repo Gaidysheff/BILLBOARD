@@ -60,7 +60,7 @@ class Feedback(models.Model):
     text = models.TextField(verbose_name='Текст комментария')
     post = models.ForeignKey(
         Post, on_delete=models.CASCADE, verbose_name='Пост', related_name='feedbacks')
-    status = models.BooleanField(default=False, verbose_name='Статус')
+    approved = models.BooleanField(default=False, verbose_name='Статус')
     dateCreation = models.DateTimeField(
         auto_now_add=True, verbose_name='Дата создания')
 

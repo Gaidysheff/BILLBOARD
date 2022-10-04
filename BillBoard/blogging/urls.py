@@ -1,7 +1,7 @@
 from django.urls import path
 
 from .views import (about, PostsHome, FeedbackList, PostsInCategory, AddBlog, UpdateBlog,
-                    DeleteBlog, contact, LoginUser, show_post, post_comments_user, FeedbacksList,
+                    DeleteBlog, contact, LoginUser, show_post, FeedbacksList,
                     FeedbackAccept, FeedbackReject, FeedbackDelete
                     )
 from customuser.views import signup
@@ -15,7 +15,6 @@ urlpatterns = [
          UpdateBlog.as_view(), name='update_blog'),
     path('post/<slug:post_slug>/delete/',
          DeleteBlog.as_view(), name='delete_blog'),
-    path('userposts/', post_comments_user, name='userposts'),
     path('feedback/', FeedbackList.as_view(), name='feedback'),
     path('<slug:post_slug>/feedbacks/',
          FeedbacksList.as_view(), name='feedback_list'),

@@ -40,7 +40,7 @@
         <div
           class="d-flex flex-md-row flex-lg-column align-items-lg-end justify-content-end gap-1"
         >
-          {% if feedback.status %}
+          {% if feedback.approved %}
 
           <button class="btn btn-outline-success">Accepted</button>
           {% else %}
@@ -49,7 +49,7 @@
           </a>
           {% endif %}
           <br />
-          {% if not feedback.status and not feedback.status is None%}
+          {% if not feedback.approved and not feedback.approved is None%}
 
           <button class="btn btn-outline-warning text-dark">Rejected</button>
           {% else %}
