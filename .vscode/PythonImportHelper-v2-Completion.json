@@ -1710,7 +1710,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/',\n         UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/',\n         DeleteBlog.as_view(), name='delete_blog'),\n    path('feedback/', FeedbackList.as_view(), name='feedback'),",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/', DeleteBlog.as_view(), name='delete_blog'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('feedback/', FeedbackList.as_view(), name='feedback'),\n    path('<slug:post_slug>/feedbacks/', FeedbacksList.as_view(), name='feedback_list'),\n    path('<slug:post_slug>/feedbacks/<int:feedback_pk>/accept', FeedbackAccept.as_view(), name='feedback_accept'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
