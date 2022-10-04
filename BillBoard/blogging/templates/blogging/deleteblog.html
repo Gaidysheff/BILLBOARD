@@ -1,9 +1,13 @@
-{% extends 'blogging/base.html' %} {% block title %}Удаление поста{% endblock %}
-{% block content %} {% if user.is_authenticated %} {% if user.if ==
-post.author.id %}
+{% extends 'blogging/base.html' %}
+<br />
+{% block title %} {{ title }}{% endblock %}
+<br />
+{% block content %}
+<br />
+
 <h1>Удалить пост ...</h1>
-<br /><br />
-<h3>Удалить: {{ post.title }}</h3>
+<br />
+<h3>Удалить: "{{ post.title }}"</h3>
 <br />
 <div class="form-group">
   <form method="post">
@@ -12,5 +16,5 @@ post.author.id %}
     <button class="btn btn-danger">Удалить</button>
   </form>
 </div>
-{% else %} Your're not allowed here (and you know it...) {% endif %} {% else %}
-Your're not allowed here (and you know it...) {% endif %} {% endblock content %}
+
+{% endblock content %}

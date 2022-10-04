@@ -18,8 +18,10 @@
           >МОЯ ПРИВАТНАЯ СТРАНИЦА (Это мой пост и коменты к нему)</a
         >
         <small>
-          <a href="#" target="_blank">| Изменить</a>
-          <a href="#">| Удалить |</a>
+          <a href="{% url 'update_blog' p.slug %}" target="_blank"
+            >| Изменить</a
+          >
+          <a href="{% url 'delete_blog' p.slug %}">| Удалить |</a>
           {% endif %} {% endif %}
         </small>
         <br />

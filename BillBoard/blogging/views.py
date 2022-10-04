@@ -117,16 +117,35 @@ class AddBlog(LoginRequiredMixin, DataMixin, CreateView):
         return dict(list(context.items()) + list(c_def.items()))
 
 
-class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):
+class UpdateBlog(IsAuthorMixin, UpdateView):
     form_class = AddPostForm
     model = Post
     template_name = 'blogging/updateblog.html'
+    permission_required = ('post.add_blog',)
+    success_url = reverse_lazy('home')
+
+    def get_object(self, **kwargs):
+        slug = self.kwargs.get('post_slug')
+        return Post.objects.get(slug=slug)
+
+    def get_context():
+        context = {'title': "Обновление поста"}
+        return context
 
 
-class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):
+class DeleteBlog(IsAuthorMixin, DeleteView):
     model = Post
     template_name = 'blogging/deleteblog.html'
+    permission_required = ('post.post_delete',)
     success_url = reverse_lazy('home')
+
+    def get_object(self, **kwargs):
+        slug = self.kwargs.get('post_slug')
+        return Post.objects.get(slug=slug)
+
+    def get_context():
+        context = {'title': "Удаление поста"}
+        return context
 
 
 class FeedbackList(DataMixin, ListView):
@@ -173,7 +192,11 @@ class FeedbackAccept(IsAuthorMixin, View):
         feedback.approved = True
         feedback.save()
 
-        return redirect(request.META['HTTP_REFERER'])
+        context = {
+            'title': "Комментарий принят"
+        }
+
+        return render(request, 'blogging/feedback_accept.html', context)
 
 
 class FeedbackReject(IsAuthorMixin, View):

@@ -1,7 +1,10 @@
-{% extends 'blogging/base.html' %} {% block content %} {% if
-user.is_authenticated %} {% if user.if == post.author.id %}
-<h1>Update Post</h1>
-<br /><br />
+{% extends 'blogging/base.html' %} {% block content %}
+<br />
+{% if user.is_authenticated %}
+<br />
+{% if user.id == post.author.id %}
+<h1>Изменение Вашего поста</h1>
+<br />
 
 <div class="container">
   <div
@@ -12,7 +15,7 @@ user.is_authenticated %} {% if user.if == post.author.id %}
   </div>
   <p></p>
   <form
-    action="{% url 'update_blog' %}"
+    action="{% url 'update_blog' post.slug %}"
     method="post"
     enctype="multipart/form-data"
   >
@@ -31,5 +34,12 @@ user.is_authenticated %} {% if user.if == post.author.id %}
   </form>
 </div>
 
-{% else %} Your're not allowed here (and you know it...) {% endif %} {% else %}
-Your're not allowed here (and you know it...) {% endif %} {% endblock content %}
+{% else %}
+<h1>Your're not allowed here (and you know it...)</h1>
+{% endif %}
+<br />
+{% else %}
+<h1>Your're not allowed here (and you know it...)</h1>
+{% endif %}
+<br />
+{% endblock content %}
