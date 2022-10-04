@@ -129,14 +129,6 @@
         "documentation": {}
     },
     {
-        "label": "reverse_lazy",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -209,131 +201,11 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -433,6 +305,46 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -450,6 +362,118 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -532,6 +556,86 @@
         "documentation": {}
     },
     {
+        "label": "Feedback",
+        "importPath": "blogging.models",
+        "description": "blogging.models",
+        "isExtraImport": true,
+        "detail": "blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "importPath": "blogging.models",
+        "description": "blogging.models",
+        "isExtraImport": true,
+        "detail": "blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "importPath": "blogging.models",
+        "description": "blogging.models",
+        "isExtraImport": true,
+        "detail": "blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "ngettext",
         "importPath": "django.utils.translation",
         "description": "django.utils.translation",
@@ -596,14 +700,6 @@
         "documentation": {}
     },
     {
-        "label": "AutoSlugField",
-        "importPath": "autoslug",
-        "description": "autoslug",
-        "isExtraImport": true,
-        "detail": "autoslug",
-        "documentation": {}
-    },
-    {
         "label": "CustomUser",
         "importPath": "customuser.models",
         "description": "customuser.models",
@@ -612,11 +708,59 @@
         "documentation": {}
     },
     {
-        "label": "slugify",
-        "importPath": "django.utils.text",
-        "description": "django.utils.text",
+        "label": "EmailMultiAlternatives",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
         "isExtraImport": true,
-        "detail": "django.utils.text",
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
+        "documentation": {}
+    },
+    {
+        "label": "render_to_string",
+        "importPath": "django.template.loader",
+        "description": "django.template.loader",
+        "isExtraImport": true,
+        "detail": "django.template.loader",
         "documentation": {}
     },
     {
@@ -652,11 +796,59 @@
         "documentation": {}
     },
     {
-        "label": "SuccessMessageMixin",
-        "importPath": "django.contrib.messages.views",
-        "description": "django.contrib.messages.views",
+        "label": "IsAuthorMixin",
+        "importPath": "blogging.utils.permissions",
+        "description": "blogging.utils.permissions",
         "isExtraImport": true,
-        "detail": "django.contrib.messages.views",
+        "detail": "blogging.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "NotIsAuthorMixin",
+        "importPath": "blogging.utils.permissions",
+        "description": "blogging.utils.permissions",
+        "isExtraImport": true,
+        "detail": "blogging.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "multiprocessing",
+        "description": "multiprocessing",
+        "isExtraImport": true,
+        "detail": "multiprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserChangeForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
         "documentation": {}
     },
     {
@@ -668,35 +860,35 @@
         "documentation": {}
     },
     {
-        "label": "Join",
-        "importPath": "newsletters.models",
-        "description": "newsletters.models",
+        "label": "SuccessMessageMixin",
+        "importPath": "django.contrib.messages.views",
+        "description": "django.contrib.messages.views",
         "isExtraImport": true,
-        "detail": "newsletters.models",
+        "detail": "django.contrib.messages.views",
         "documentation": {}
     },
     {
-        "label": "JoinForm",
-        "importPath": "newsletters.forms",
-        "description": "newsletters.forms",
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
         "isExtraImport": true,
-        "detail": "newsletters.forms",
+        "detail": "django.http",
         "documentation": {}
     },
     {
-        "label": "JoinForm",
-        "importPath": "newsletters.forms",
-        "description": "newsletters.forms",
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
         "isExtraImport": true,
-        "detail": "newsletters.forms",
+        "detail": "django.http",
         "documentation": {}
     },
     {
-        "label": "CreateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
         "isExtraImport": true,
-        "detail": "django.views.generic",
+        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -709,14 +901,6 @@
     },
     {
         "label": "DeleteView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "DetailView",
         "importPath": "django.views.generic",
         "description": "django.views.generic",
         "isExtraImport": true,
@@ -748,115 +932,27 @@
         "documentation": {}
     },
     {
-        "label": "AuthenticationForm",
-        "importPath": "django.contrib.auth.forms",
-        "description": "django.contrib.auth.forms",
+        "label": "JoinForm",
+        "importPath": "newsletters.forms",
+        "description": "newsletters.forms",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.forms",
+        "detail": "newsletters.forms",
         "documentation": {}
     },
     {
-        "label": "UserCreationForm",
-        "importPath": "django.contrib.auth.forms",
-        "description": "django.contrib.auth.forms",
+        "label": "JoinForm",
+        "importPath": "newsletters.forms",
+        "description": "newsletters.forms",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.forms",
+        "detail": "newsletters.forms",
         "documentation": {}
     },
     {
-        "label": "UserChangeForm",
-        "importPath": "django.contrib.auth.forms",
-        "description": "django.contrib.auth.forms",
+        "label": "Join",
+        "importPath": "newsletters.models",
+        "description": "newsletters.models",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.forms",
-        "documentation": {}
-    },
-    {
-        "label": "LoginRequiredMixin",
-        "importPath": "django.contrib.auth.mixins",
-        "description": "django.contrib.auth.mixins",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.mixins",
-        "documentation": {}
-    },
-    {
-        "label": "LoginView",
-        "importPath": "django.contrib.auth.views",
-        "description": "django.contrib.auth.views",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.views",
-        "documentation": {}
-    },
-    {
-        "label": "exception",
-        "importPath": "django.core.handlers",
-        "description": "django.core.handlers",
-        "isExtraImport": true,
-        "detail": "django.core.handlers",
-        "documentation": {}
-    },
-    {
-        "label": "Http404",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "newsletters.models",
         "documentation": {}
     },
     {
@@ -901,14 +997,6 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
         "label": "timezone",
         "importPath": "django.utils",
         "description": "django.utils",
@@ -941,59 +1029,11 @@
         "documentation": {}
     },
     {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
-        "label": "authenticate",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
         "label": "PasswordResetTokenGenerator",
         "importPath": "django.contrib.auth.tokens",
         "description": "django.contrib.auth.tokens",
         "isExtraImport": true,
         "detail": "django.contrib.auth.tokens",
-        "documentation": {}
-    },
-    {
-        "label": "send_mail",
-        "importPath": "django.core.mail",
-        "description": "django.core.mail",
-        "isExtraImport": true,
-        "detail": "django.core.mail",
-        "documentation": {}
-    },
-    {
-        "label": "send_mass_mail",
-        "importPath": "django.core.mail",
-        "description": "django.core.mail",
-        "isExtraImport": true,
-        "detail": "django.core.mail",
-        "documentation": {}
-    },
-    {
-        "label": "EmailMessage",
-        "importPath": "django.core.mail",
-        "description": "django.core.mail",
-        "isExtraImport": true,
-        "detail": "django.core.mail",
-        "documentation": {}
-    },
-    {
-        "label": "generic",
-        "importPath": "django.views",
-        "description": "django.views",
-        "isExtraImport": true,
-        "detail": "django.views",
         "documentation": {}
     },
     {
@@ -1021,14 +1061,6 @@
         "documentation": {}
     },
     {
-        "label": "urlsafe_base64_encode",
-        "importPath": "django.utils.http",
-        "description": "django.utils.http",
-        "isExtraImport": true,
-        "detail": "django.utils.http",
-        "documentation": {}
-    },
-    {
         "label": "urlsafe_base64_decode",
         "importPath": "django.utils.http",
         "description": "django.utils.http",
@@ -1037,11 +1069,11 @@
         "documentation": {}
     },
     {
-        "label": "render_to_string",
-        "importPath": "django.template.loader",
-        "description": "django.template.loader",
+        "label": "urlsafe_base64_encode",
+        "importPath": "django.utils.http",
+        "description": "django.utils.http",
         "isExtraImport": true,
-        "detail": "django.template.loader",
+        "detail": "django.utils.http",
         "documentation": {}
     },
     {
@@ -1521,11 +1553,29 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0015_alter_feedback_options_and_more",
+        "description": "BillBoard.blogging.migrations.0015_alter_feedback_options_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('blogging', '0014_rename_category_post_cat'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='feedback',\n            options={'ordering': ['dateCreation'], 'verbose_name': 'Комментарий', 'verbose_name_plural': 'Комментарии'},\n        ),",
+        "detail": "BillBoard.blogging.migrations.0015_alter_feedback_options_and_more",
+        "documentation": {}
+    },
+    {
         "label": "show_categories",
         "kind": 2,
         "importPath": "BillBoard.blogging.templatetags.blogging_tags",
         "description": "BillBoard.blogging.templatetags.blogging_tags",
-        "peekOfCode": "def show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}",
+        "peekOfCode": "def show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}\n@register.simple_tag()\ndef get_feedback():\n    return Post.objects.get(id=2).feedbacks.all()",
+        "detail": "BillBoard.blogging.templatetags.blogging_tags",
+        "documentation": {}
+    },
+    {
+        "label": "get_feedback",
+        "kind": 2,
+        "importPath": "BillBoard.blogging.templatetags.blogging_tags",
+        "description": "BillBoard.blogging.templatetags.blogging_tags",
+        "peekOfCode": "def get_feedback():\n    return Post.objects.get(id=2).feedbacks.all()",
         "detail": "BillBoard.blogging.templatetags.blogging_tags",
         "documentation": {}
     },
@@ -1534,8 +1584,26 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.templatetags.blogging_tags",
         "description": "BillBoard.blogging.templatetags.blogging_tags",
-        "peekOfCode": "register = template.Library()\n@register.inclusion_tag('blogging/list_categories.html')\ndef show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}",
+        "peekOfCode": "register = template.Library()\n@register.inclusion_tag('blogging/list_categories.html')\ndef show_categories(sort=None, cat_selected=0):\n    if not sort:\n        cats = Category.objects.all()\n    else:\n        cats = Category.objects.order_by(sort)\n    return {'cats': cats, 'cat_selected': cat_selected}\n@register.simple_tag()\ndef get_feedback():",
         "detail": "BillBoard.blogging.templatetags.blogging_tags",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthorMixin",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.utils.permissions",
+        "description": "BillBoard.blogging.utils.permissions",
+        "peekOfCode": "class IsAuthorMixin(LoginRequiredMixin):\n    def get_slug_list(self, dict_):\n        slugs = []\n        for slug in dict_:\n            slugs.append(slug.get('slug'))\n        return slugs\n    def get_pk_list(self, dict_):\n        pks = []\n        for pk in dict_:\n            pks.append(pk.get('pk'))",
+        "detail": "BillBoard.blogging.utils.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "NotIsAuthorMixin",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.utils.permissions",
+        "description": "BillBoard.blogging.utils.permissions",
+        "peekOfCode": "class NotIsAuthorMixin(LoginRequiredMixin):\n    def dispatch(self, request, *args, **kwargs):\n        if not request.user.is_authenticated:\n            return self.handle_no_permission()\n        post = Post.objects.filter(slug=kwargs.get('post_slug')).first()\n        if post:\n            if post in request.user.posts.all():\n                return redirect('post')\n        return super().dispatch(request, *args, **kwargs)",
+        "detail": "BillBoard.blogging.utils.permissions",
         "documentation": {}
     },
     {
@@ -1543,7 +1611,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class FeedbackAdmin(admin.ModelAdmin):\n    list_display = ('id', 'author', 'text', 'post', 'status', 'dateCreation',)\n    search_fields = ('author', )\n    list_filter = ('status', 'dateCreation', )\n    list_editable = ('status', 'author',)\n# _______добавление команд в список действий в админке ____________\n    actions = ['make_published', 'make_withdrawn']\n    @admin.action(description='Опубликовать выбранные комментарии')\n    def make_published(self, request, queryset):\n        updated = queryset.update(status=True)",
+        "peekOfCode": "class FeedbackAdmin(admin.ModelAdmin):\n    list_display = ('id', 'author', 'text', 'post',\n                    'approved', 'dateCreation',)\n    search_fields = ('author', )\n    list_filter = ('approved', 'dateCreation', )\n    list_editable = ('approved', 'author',)\n# _______добавление команд в список действий в админке ____________\n    actions = ['make_published', 'make_withdrawn']\n    @admin.action(description='Опубликовать выбранные комментарии')\n    def make_published(self, request, queryset):",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -1561,7 +1629,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.admin",
         "description": "BillBoard.blogging.admin",
-        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'cat', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('cat', 'author',)\n    list_filter = ('dateCreation', )\n    prepopulated_fields = {'slug': ('title',)}\n    inlines = [FeedbackInline]\n    # @admin.display(ordering='author')",
+        "peekOfCode": "class PostAdmin(admin.ModelAdmin):\n    list_display = ('id', 'title', 'slug', 'text', 'photo',\n                    'upload', 'dateCreation', 'cat', 'author', )\n    list_display_links = ('id', 'title', )\n    search_fields = ('title', 'text', )\n    list_editable = ('cat', 'author',)\n    list_filter = ('dateCreation', )\n    prepopulated_fields = {'slug': ('title',)}\n    inlines = [FeedbackInline]\n@admin.register(Category)",
         "detail": "BillBoard.blogging.admin",
         "documentation": {}
     },
@@ -1579,7 +1647,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.apps",
         "description": "BillBoard.blogging.apps",
-        "peekOfCode": "class BloggingConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blogging'\n    verbose_name = 'MMORPG - Доска объявлений'",
+        "peekOfCode": "class BloggingConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'blogging'\n    verbose_name = 'MMORPG - Доска объявлений'\n    def ready(self):\n        import blogging.signals",
         "detail": "BillBoard.blogging.apps",
         "documentation": {}
     },
@@ -1593,11 +1661,20 @@
         "documentation": {}
     },
     {
+        "label": "CommentForm",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.forms",
+        "description": "BillBoard.blogging.forms",
+        "peekOfCode": "class CommentForm(forms.ModelForm):\n    class Meta:\n        model = Feedback\n        fields = ['author', 'text']",
+        "detail": "BillBoard.blogging.forms",
+        "documentation": {}
+    },
+    {
         "label": "Post",
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Post(models.Model):\n    author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)\n    title = models.CharField(max_length=128, unique=True,\n                             verbose_name='Заголовок поста')\n    # slug = AutoSlugField(populate_from='title')\n    slug = models.SlugField(max_length=255, unique=True, db_index=True,\n                            verbose_name='URL', help_text=_('slug назначится автоматически'))  # default=uuid.uuid4,\n    text = models.TextField(verbose_name='Текст поста',\n                            help_text=_('Введите здесь текст своего Поста.'))\n    photo = models.ImageField(",
+        "peekOfCode": "class Post(models.Model):\n    author = models.ForeignKey(\n        CustomUser, on_delete=models.CASCADE, related_name='posts')\n    title = models.CharField(max_length=128, unique=True,\n                             verbose_name='Заголовок поста')\n    slug = models.SlugField(max_length=255, unique=True, db_index=True,\n                            verbose_name='URL', help_text=_('slug назначится автоматически'))\n    text = models.TextField(verbose_name='Текст поста',\n                            help_text=_('Введите здесь текст своего Поста.'))\n    photo = models.ImageField(",
         "detail": "BillBoard.blogging.models",
         "documentation": {}
     },
@@ -1606,7 +1683,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True,\n                            verbose_name='Название категории')\n    slug = models.SlugField(max_length=255, unique=True,\n                            db_index=True, verbose_name='URL')  # default=uuid.uuid4,\n    class Meta:\n        verbose_name = 'Категория'\n        verbose_name_plural = 'Категории'\n        ordering = ['name', ]\n    def __str__(self):",
+        "peekOfCode": "class Category(models.Model):\n    name = models.CharField(max_length=64, unique=True,\n                            verbose_name='Название категории')\n    slug = models.SlugField(max_length=255, unique=True,\n                            db_index=True, verbose_name='URL')\n    class Meta:\n        verbose_name = 'Категория'\n        verbose_name_plural = 'Категории'\n        ordering = ['name', ]\n    def __str__(self):",
         "detail": "BillBoard.blogging.models",
         "documentation": {}
     },
@@ -1615,8 +1692,17 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Feedback(models.Model):\n    author = models.OneToOneField(\n        CustomUser, on_delete=models.CASCADE, verbose_name='Автор')\n    text = models.TextField(verbose_name='Текст комментария')\n    post = models.ForeignKey(\n        Post, on_delete=models.CASCADE, verbose_name='Пост')\n    status = models.BooleanField(default=False, verbose_name='Статус')\n    dateCreation = models.DateTimeField(\n        auto_now_add=True, verbose_name='Дата создания')\n    class Meta:",
+        "peekOfCode": "class Feedback(models.Model):\n    author = models.OneToOneField(\n        CustomUser, on_delete=models.CASCADE, verbose_name='Автор')\n    text = models.TextField(verbose_name='Текст комментария')\n    post = models.ForeignKey(\n        Post, on_delete=models.CASCADE, verbose_name='Пост', related_name='feedbacks')\n    approved = models.BooleanField(default=False, verbose_name='Статус')\n    dateCreation = models.DateTimeField(\n        auto_now_add=True, verbose_name='Дата создания')\n    class Meta:",
         "detail": "BillBoard.blogging.models",
+        "documentation": {}
+    },
+    {
+        "label": "notify_post",
+        "kind": 2,
+        "importPath": "BillBoard.blogging.signals",
+        "description": "BillBoard.blogging.signals",
+        "peekOfCode": "def notify_post(sender, instance, created, **kwargs):\n    if created:\n        user = instance.author\n        html = render_to_string(\n            'blogging/mail.html',\n            {\n                'user': user,\n                'comment': instance,\n            },\n        )",
+        "detail": "BillBoard.blogging.signals",
         "documentation": {}
     },
     {
@@ -1624,7 +1710,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', ShowPost.as_view(), name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('about/', about, name='about'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/',\n         UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/',\n         DeleteBlog.as_view(), name='delete_blog'),",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('post/<slug:post_slug>/update/',\n         UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/',\n         DeleteBlog.as_view(), name='delete_blog'),\n    path('feedback/', FeedbackList.as_view(), name='feedback'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
@@ -1642,7 +1728,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.utilities",
         "description": "BillBoard.blogging.utilities",
-        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n]\nclass DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs\n        cats = Category.objects.order_by('name')",
+        "peekOfCode": "menu = [\n    {'title': \"О сайте\", 'url_name': 'about'},\n    {'title': \"Добавить блог\", 'url_name': 'add_blog'},\n    {'title': \"Обратная связь\", 'url_name': 'contact'},\n    # {'title': \"Мои посты и коменты к ним\", 'url_name': 'feedback_list'},\n]\nclass DataMixin:\n    paginate_by = 3\n    def get_user_context(self, **kwargs):\n        context = kwargs",
         "detail": "BillBoard.blogging.utilities",
         "documentation": {}
     },
@@ -1660,16 +1746,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'\n# __________________________________________\nclass ShowPost(DataMixin, DetailView):\n    model = Post\n    template_name = 'blogging/post.html'",
-        "detail": "BillBoard.blogging.views",
-        "documentation": {}
-    },
-    {
-        "label": "ShowPost",
-        "kind": 6,
-        "importPath": "BillBoard.blogging.views",
-        "description": "BillBoard.blogging.views",
-        "peekOfCode": "class ShowPost(DataMixin, DetailView):\n    model = Post\n    template_name = 'blogging/post.html'\n    slug_url_kwarg = 'post_slug'\n    context_object_name = 'post'\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=context['post'])\n        return dict(list(context.items()) + list(c_def.items()))\n# _________________________________________________________________",
+        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'\ndef show_post(request, post_slug):\n    post = get_object_or_404(Post, slug=post_slug)\n    feedbacks = post.feedbacks.filter(approved=True)\n    new_feedback = None",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1687,7 +1764,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "class LoginUser(LoginView):\n    form_class = AuthenticationForm\n    template_name = 'blogging/login.html'\n    # def get_context_data(self, *, object_list=None, **kwargs):\n    #     context = super().get_context_data(**kwargs)\n    #     c_def = self.get_user_context(title=\"Авторизация\")\n    #     return dict(list(context.items()) + list(c_def.items()))\nclass AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'",
+        "peekOfCode": "class LoginUser(LoginView):\n    form_class = AuthenticationForm\n    template_name = 'blogging/login.html'\nclass AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    model = Post\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'\n    success_url = reverse_lazy('home')\n    login_url = reverse_lazy('home')\n    raise_exception = True",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1696,7 +1773,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "class AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'\n    success_url = reverse_lazy('home')\n    login_url = reverse_lazy('home')\n    raise_exception = True\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=\"Добавление статьи\")\n        return dict(list(context.items()) + list(c_def.items()))",
+        "peekOfCode": "class AddBlog(LoginRequiredMixin, DataMixin, CreateView):\n    model = Post\n    form_class = AddPostForm\n    template_name = 'blogging/addblog.html'\n    success_url = reverse_lazy('home')\n    login_url = reverse_lazy('home')\n    raise_exception = True\n    def get_context_data(self, *, object_list=None, **kwargs):\n        context = super().get_context_data(**kwargs)\n        c_def = self.get_user_context(title=\"Добавить пост\")",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1705,7 +1782,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "class UpdateBlog(LoginRequiredMixin, DataMixin, UpdateView):\n    form_class = AddPostForm\n    model = Post\n    template_name = 'blogging/updateblog.html'\n    # success_url = reverse_lazy('home')\n    # login_url = reverse_lazy('home')\n    # raise_exception = True\nclass DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):\n    model = Post\n    template_name = 'blogging/deleteblog.html'",
+        "peekOfCode": "class UpdateBlog(IsAuthorMixin, UpdateView):\n    form_class = AddPostForm\n    model = Post\n    template_name = 'blogging/updateblog.html'\n    permission_required = ('post.add_blog',)\n    success_url = reverse_lazy('home')\n    def get_object(self, **kwargs):\n        slug = self.kwargs.get('post_slug')\n        return Post.objects.get(slug=slug)\n    def get_context():",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1714,7 +1791,61 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "class DeleteBlog(LoginRequiredMixin, DataMixin, DeleteView):\n    model = Post\n    template_name = 'blogging/deleteblog.html'\n    success_url = reverse_lazy('home')\ndef about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "class DeleteBlog(IsAuthorMixin, DeleteView):\n    model = Post\n    template_name = 'blogging/deleteblog.html'\n    permission_required = ('post.post_delete',)\n    success_url = reverse_lazy('home')\n    def get_object(self, **kwargs):\n        slug = self.kwargs.get('post_slug')\n        return Post.objects.get(slug=slug)\n    def get_context():\n        context = {'title': \"Удаление поста\"}",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbackList",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbackList(DataMixin, ListView):\n    model = Feedback\n    template_name = 'blogging/feedback_list.html'\n    context_object_name = 'feedback_list'\n    def get_queryset(self):\n        return Feedback.objects.all()\ndef about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbacksList",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)\n        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)\n        context = {\n            'feedbacks': queryset,\n            'post': post\n        }\n        context['title'] = \"Приватно для пользователя\"",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbackAccept",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbackAccept(IsAuthorMixin, View):\n    def get(self, request, *args, **kwargs):\n        feedback_pk = kwargs['feedback_pk']\n        feedback = Feedback.objects.get(pk=feedback_pk)\n        feedback.approved = True\n        feedback.save()\n        context = {\n            'title': \"Комментарий принят\"\n        }\n        return render(request, 'blogging/feedback_accept.html', context)",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbackReject",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbackReject(IsAuthorMixin, View):\n    def get(self, request, *args, **kwargs):\n        feedback_pk = kwargs['feedback_pk']\n        feedback = Feedback.objects.get(pk=feedback_pk)\n        feedback.approved = False\n        feedback.save()\n        return redirect(request.META['HTTP_REFERER'])\nclass FeedbackDelete(LoginRequiredMixin, DeleteView):\n    model = Feedback\n    template_name = 'blogging/feedback_delete.html'",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbackDelete",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbackDelete(LoginRequiredMixin, DeleteView):\n    model = Feedback\n    template_name = 'blogging/feedback_delete.html'\n    success_url = 'home'\n    permission_required = ('blogging.feedback_delete')\n    context_object_name = 'feedback'\n    def get_object(self, **kwargs):\n        feedback_id = self.kwargs.get('feedback_pk')\n        feedback = Feedback.objects.get(pk=feedback_id)\n        return feedback",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
+        "label": "show_post",
+        "kind": 2,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "def show_post(request, post_slug):\n    post = get_object_or_404(Post, slug=post_slug)\n    feedbacks = post.feedbacks.filter(approved=True)\n    new_feedback = None\n    if request.method == 'POST':\n        feedback_form = CommentForm(data=request.POST)\n        if feedback_form.is_valid():\n            new_feedback = feedback_form.save(commit=False)\n            new_feedback.post = post\n            new_feedback.save()",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1723,7 +1854,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "def about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1732,7 +1863,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "def contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)\n        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)\n        context = {",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1741,7 +1872,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')",
+        "peekOfCode": "def pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)\n        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)\n        context = {\n            'feedbacks': queryset,\n            'post': post",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1849,7 +1980,7 @@
         "kind": 5,
         "importPath": "BillBoard.customuser.urls",
         "description": "BillBoard.customuser.urls",
-        "peekOfCode": "urlpatterns = [\n    path('signup/', signup, name='signup'),\n    path('activate/(?P<uidb64>[0-9A-Za-z_\\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'), \n    # path('signup/', views.SignUp.as_view(), name='signup'), \n    ]",
+        "peekOfCode": "urlpatterns = [\n    path('signup/', signup, name='signup'),\n    path(\n        'activate/(?P<uidb64>[0-9A-Za-z_\\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/', activate, name='activate'),\n]",
         "detail": "BillBoard.customuser.urls",
         "documentation": {}
     },
@@ -1858,7 +1989,7 @@
         "kind": 2,
         "importPath": "BillBoard.customuser.views",
         "description": "BillBoard.customuser.views",
-        "peekOfCode": "def signup(request): \n    if request.method == 'POST': \n        form = CustomUserCreationForm(request.POST) \n        if form.is_valid(): \n            # save form in the memory not in database \n            user = form.save(commit=False) \n            user.is_active = False \n            user.save() \n            # to get the domain of the current site \n            current_site = get_current_site(request) ",
+        "peekOfCode": "def signup(request):\n    if request.method == 'POST':\n        form = CustomUserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save(commit=False)\n            user.is_active = False\n            user.save()\n            current_site = get_current_site(request)\n            mail_subject = 'Activation link has been sent to your email id'\n            message = render_to_string('acc_active_email.html', {",
         "detail": "BillBoard.customuser.views",
         "documentation": {}
     },
@@ -1867,7 +1998,7 @@
         "kind": 2,
         "importPath": "BillBoard.customuser.views",
         "description": "BillBoard.customuser.views",
-        "peekOfCode": "def activate(request, uidb64, token): \n    User = get_user_model() \n    try: \n        uid = force_str(urlsafe_base64_decode(uidb64)) \n        user = User.objects.get(pk=uid) \n    except(TypeError, ValueError, OverflowError, User.DoesNotExist): \n        user = None \n    if user is not None and account_activation_token.check_token(user, token): \n        user.is_active = True \n        user.save() ",
+        "peekOfCode": "def activate(request, uidb64, token):\n    User = get_user_model()\n    try:\n        uid = force_str(urlsafe_base64_decode(uidb64))\n        user = User.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, User.DoesNotExist):\n        user = None\n    if user is not None and account_activation_token.check_token(user, token):\n        user.is_active = True\n        user.save()",
         "detail": "BillBoard.customuser.views",
         "documentation": {}
     },
@@ -1878,6 +2009,15 @@
         "description": "BillBoard.newsletters.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Join',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('email', models.EmailField(max_length=254)),",
         "detail": "BillBoard.newsletters.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.newsletters.migrations.0002_alter_join_options",
+        "description": "BillBoard.newsletters.migrations.0002_alter_join_options",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('newsletters', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='join',\n            options={'ordering': ['email'], 'verbose_name': 'Подписчик', 'verbose_name_plural': 'Подписчики'},\n        ),\n    ]",
+        "detail": "BillBoard.newsletters.migrations.0002_alter_join_options",
         "documentation": {}
     },
     {
@@ -1948,7 +2088,7 @@
         "kind": 6,
         "importPath": "BillBoard.newsletters.views",
         "description": "BillBoard.newsletters.views",
-        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'\n# # функция для (FormView)\n#     def from_valid(self, form):\n#         email = form.cleaned_data.get('email')\n#         return super(JoinView, self).form_valid(form)",
+        "peekOfCode": "class JoinView(SuccessMessageMixin, CreateView):\n    model = Join\n    form_class = JoinForm\n    success_url = reverse_lazy('home')\n    def get_success_message(self, cleaned_data):\n        return 'Thank you for joining'",
         "detail": "BillBoard.newsletters.views",
         "documentation": {}
     },
