@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'customuser',
     'blogging.apps.BloggingConfig',
     'newsletters.apps.NewslettersConfig',
+    'django-filter',
 ]
 
 MIDDLEWARE = [

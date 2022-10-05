@@ -1,4 +1,3 @@
-from blogging.utils.permissions import IsAuthorMixin, NotIsAuthorMixin
 from multiprocessing import context
 
 from django.contrib.auth.forms import AuthenticationForm
@@ -10,11 +9,13 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import (CreateView, DeleteView, ListView,
-                                  UpdateView)
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from newsletters.forms import JoinForm
 from newsletters.models import Join
 
+from blogging.utils.permissions import IsAuthorMixin, NotIsAuthorMixin
+
+from .filters import FeedbackFilter
 from .forms import AddPostForm, FeedbackForm
 from .models import Category, Feedback, Post
 from .utilities import DataMixin, menu
@@ -168,6 +169,7 @@ def contact(request):
 def pageNotFound(request, exception):
     return render(request, 'blogging/PageNotFound.html')
 
+
 class FeedbackCreate(NotIsAuthorMixin, View):
     def get(self, request, **kwargs):
         form = FeedbackForm(request.POST or None)
@@ -246,3 +248,21 @@ class FeedbackDelete(LoginRequiredMixin, DeleteView):
         feedback_id = self.kwargs.get('feedback_pk')
         feedback = Feedback.objects.get(pk=feedback_id)
         return feedback
+
+
+class AllFeedbacksList(IsAuthorMixin, DataMixin, ListView):
+    model = Feedback
+    ordering = 'dateCreation'
+    template_name = 'blogging/feedbacks_all.html'
+    context_object_name = 'feedbacks_all'
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        self.filterset = FeedbackFilter(self.request.GET, queryset)
+        return self.filterset.qs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['filterset'] = self.filterset
+        context['title'] = 'Отзывы на мои посты'
+        return context
