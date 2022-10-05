@@ -15,7 +15,7 @@ from django.views.generic import (CreateView, DeleteView, ListView,
 from newsletters.forms import JoinForm
 from newsletters.models import Join
 
-from .forms import AddPostForm, CommentForm
+from .forms import AddPostForm, FeedbackForm
 from .models import Category, Feedback, Post
 from .utilities import DataMixin, menu
 
@@ -49,13 +49,13 @@ def show_post(request, post_slug):
     new_feedback = None
 
     if request.method == 'POST':
-        feedback_form = CommentForm(data=request.POST)
+        feedback_form = FeedbackForm(data=request.POST)
         if feedback_form.is_valid():
             new_feedback = feedback_form.save(commit=False)
             new_feedback.post = post
             new_feedback.save()
     else:
-        feedback_form = CommentForm()
+        feedback_form = FeedbackForm()
 
     context = {
         'menu': menu,
@@ -167,6 +167,31 @@ def contact(request):
 
 def pageNotFound(request, exception):
     return render(request, 'blogging/PageNotFound.html')
+
+class FeedbackCreate(NotIsAuthorMixin, View):
+    def get(self, request, **kwargs):
+        form = FeedbackForm(request.POST or None)
+        post = Post.objects.get(slug=kwargs['post_slug'])
+
+        context = {
+            'form': form,
+            'post': post
+        }
+
+        return render(request, 'blogging/feedback_create.html', context)
+
+    def post(self, request, *args, **kwargs):
+        form = FeedbackForm(request.POST)
+        user = request.user
+        post_slug = kwargs['post_slug']
+
+        if form.is_valid():
+            feedback = form.save(commit=False)
+            feedback.author = user
+            feedback.post = Post.objects.get(slug=post_slug)
+            feedback.save()
+
+        return redirect('/')
 
 
 class FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,

@@ -84,5 +84,17 @@
     {% endif %}
   </div>
 </div>
+<!-- ----------------- a user makes a new comment ------------ -->
+<hr>
+<div class="card-footer">
+<hr>
+<a href="{% url 'update_blog' post.slug %}"><u> Редактировать статью</u><a/>
+<hr>
+<a href="{% url 'delete_blog' post.slug %}"><u> Удалить статью</u><a/>
+<hr>
+    <a href="{% url 'feedback_create' post.slug %}"><u> Оставить комментарий</u><a/>
+        <hr>
+    <a href="{% url 'feedback_list' post.slug %}"><u> Все комментарии к статье</u><a/>
+</div>
 
 {% endblock content %}

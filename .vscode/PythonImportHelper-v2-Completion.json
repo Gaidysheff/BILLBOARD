@@ -209,19 +209,11 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
         "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.conf",
         "documentation": {}
     },
     {
@@ -313,6 +305,22 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -386,6 +394,22 @@
     },
     {
         "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -1562,6 +1586,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.migrations.0016_alter_feedback_author",
+        "description": "BillBoard.blogging.migrations.0016_alter_feedback_author",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('blogging', '0015_alter_feedback_options_and_more'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='feedback',\n            name='author',\n            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Автор'),",
+        "detail": "BillBoard.blogging.migrations.0016_alter_feedback_author",
+        "documentation": {}
+    },
+    {
         "label": "show_categories",
         "kind": 2,
         "importPath": "BillBoard.blogging.templatetags.blogging_tags",
@@ -1661,11 +1694,11 @@
         "documentation": {}
     },
     {
-        "label": "CommentForm",
+        "label": "FeedbackForm",
         "kind": 6,
         "importPath": "BillBoard.blogging.forms",
         "description": "BillBoard.blogging.forms",
-        "peekOfCode": "class CommentForm(forms.ModelForm):\n    class Meta:\n        model = Feedback\n        fields = ['author', 'text']",
+        "peekOfCode": "class FeedbackForm(forms.ModelForm):\n    class Meta:\n        model = Feedback\n        fields = ['text',]",
         "detail": "BillBoard.blogging.forms",
         "documentation": {}
     },
@@ -1692,7 +1725,7 @@
         "kind": 6,
         "importPath": "BillBoard.blogging.models",
         "description": "BillBoard.blogging.models",
-        "peekOfCode": "class Feedback(models.Model):\n    author = models.OneToOneField(\n        CustomUser, on_delete=models.CASCADE, verbose_name='Автор')\n    text = models.TextField(verbose_name='Текст комментария')\n    post = models.ForeignKey(\n        Post, on_delete=models.CASCADE, verbose_name='Пост', related_name='feedbacks')\n    approved = models.BooleanField(default=False, verbose_name='Статус')\n    dateCreation = models.DateTimeField(\n        auto_now_add=True, verbose_name='Дата создания')\n    class Meta:",
+        "peekOfCode": "class Feedback(models.Model):\n    author = models.ForeignKey(\n        CustomUser, on_delete=models.CASCADE, verbose_name='Автор')\n    text = models.TextField(verbose_name='Текст комментария')\n    post = models.ForeignKey(\n        Post, on_delete=models.CASCADE, verbose_name='Пост', related_name='feedbacks')\n    approved = models.BooleanField(default=False, verbose_name='Статус')\n    dateCreation = models.DateTimeField(\n        auto_now_add=True, verbose_name='Дата создания')\n    class Meta:",
         "detail": "BillBoard.blogging.models",
         "documentation": {}
     },
@@ -1719,7 +1752,7 @@
         "kind": 5,
         "importPath": "BillBoard.blogging.urls",
         "description": "BillBoard.blogging.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/', DeleteBlog.as_view(), name='delete_blog'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('feedback/', FeedbackList.as_view(), name='feedback'),\n    path('<slug:post_slug>/feedbacks/', FeedbacksList.as_view(), name='feedback_list'),\n    path('<slug:post_slug>/feedbacks/<int:feedback_pk>/accept', FeedbackAccept.as_view(), name='feedback_accept'),",
+        "peekOfCode": "urlpatterns = [\n    path('', PostsHome.as_view(), name='home'),\n    path('post/<slug:post_slug>/', show_post, name='post'),\n    path('category/<slug:cat_slug>/', PostsInCategory.as_view(), name='category'),\n    path('post/<slug:post_slug>/update/', UpdateBlog.as_view(), name='update_blog'),\n    path('post/<slug:post_slug>/delete/', DeleteBlog.as_view(), name='delete_blog'),\n    path('addblog/', AddBlog.as_view(), name='add_blog'),\n    path('feedback/', FeedbackList.as_view(), name='feedback'),\n    path('<slug:post_slug>/create_feedback', FeedbackCreate.as_view(), name='feedback_create'),\n    path('<slug:post_slug>/feedbacks/', FeedbacksList.as_view(), name='feedback_list'),",
         "detail": "BillBoard.blogging.urls",
         "documentation": {}
     },
@@ -1814,6 +1847,15 @@
         "documentation": {}
     },
     {
+        "label": "FeedbackCreate",
+        "kind": 6,
+        "importPath": "BillBoard.blogging.views",
+        "description": "BillBoard.blogging.views",
+        "peekOfCode": "class FeedbackCreate(NotIsAuthorMixin, View):\n    def get(self, request, **kwargs):\n        form = FeedbackForm(request.POST or None)\n        post = Post.objects.get(slug=kwargs['post_slug'])\n        context = {\n            'form': form,\n            'post': post\n        }\n        return render(request, 'blogging/feedback_create.html', context)\n    def post(self, request, *args, **kwargs):",
+        "detail": "BillBoard.blogging.views",
+        "documentation": {}
+    },
+    {
         "label": "FeedbacksList",
         "kind": 6,
         "importPath": "BillBoard.blogging.views",
@@ -1854,7 +1896,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def show_post(request, post_slug):\n    post = get_object_or_404(Post, slug=post_slug)\n    feedbacks = post.feedbacks.filter(approved=True)\n    new_feedback = None\n    if request.method == 'POST':\n        feedback_form = CommentForm(data=request.POST)\n        if feedback_form.is_valid():\n            new_feedback = feedback_form.save(commit=False)\n            new_feedback.post = post\n            new_feedback.save()",
+        "peekOfCode": "def show_post(request, post_slug):\n    post = get_object_or_404(Post, slug=post_slug)\n    feedbacks = post.feedbacks.filter(approved=True)\n    new_feedback = None\n    if request.method == 'POST':\n        feedback_form = FeedbackForm(data=request.POST)\n        if feedback_form.is_valid():\n            new_feedback = feedback_form.save(commit=False)\n            new_feedback.post = post\n            new_feedback.save()",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1863,7 +1905,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)",
+        "peekOfCode": "def about(request):\n    return render(request, 'blogging/about.html', {'title': 'О сайте'})\ndef contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbackCreate(NotIsAuthorMixin, View):\n    def get(self, request, **kwargs):\n        form = FeedbackForm(request.POST or None)\n        post = Post.objects.get(slug=kwargs['post_slug'])",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1872,7 +1914,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)\n        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)\n        context = {",
+        "peekOfCode": "def contact(request):\n    return HttpResponse(\"<h1>Контакты</h1>\")\ndef pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbackCreate(NotIsAuthorMixin, View):\n    def get(self, request, **kwargs):\n        form = FeedbackForm(request.POST or None)\n        post = Post.objects.get(slug=kwargs['post_slug'])\n        context = {\n            'form': form,",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },
@@ -1881,7 +1923,7 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.views",
         "description": "BillBoard.blogging.views",
-        "peekOfCode": "def pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,\n    def get(self, request, *args, **kwargs):\n        post_slug = self.kwargs['post_slug']\n        post = Post.objects.get(slug=post_slug)\n        queryset = Feedback.objects.order_by('-dateCreation').filter(post=post)\n        context = {\n            'feedbacks': queryset,\n            'post': post",
+        "peekOfCode": "def pageNotFound(request, exception):\n    return render(request, 'blogging/PageNotFound.html')\nclass FeedbackCreate(NotIsAuthorMixin, View):\n    def get(self, request, **kwargs):\n        form = FeedbackForm(request.POST or None)\n        post = Post.objects.get(slug=kwargs['post_slug'])\n        context = {\n            'form': form,\n            'post': post\n        }",
         "detail": "BillBoard.blogging.views",
         "documentation": {}
     },

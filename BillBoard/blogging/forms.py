@@ -49,8 +49,8 @@ class AddPostForm(forms.ModelForm):
         return cleaned_data
 
 
-class CommentForm(forms.ModelForm):
+class FeedbackForm(forms.ModelForm):
 
     class Meta:
         model = Feedback
-        fields = ['author', 'text']
+        fields = ['text',]

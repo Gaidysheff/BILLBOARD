@@ -55,7 +55,7 @@ class Category(models.Model):
 
 
 class Feedback(models.Model):
-    author = models.OneToOneField(
+    author = models.ForeignKey(
         CustomUser, on_delete=models.CASCADE, verbose_name='Автор')
     text = models.TextField(verbose_name='Текст комментария')
     post = models.ForeignKey(

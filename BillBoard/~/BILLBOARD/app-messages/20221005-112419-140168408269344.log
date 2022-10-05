@@ -1,0 +1,37 @@
+Content-Type: multipart/alternative;
+ boundary="===============8812852253681458549=="
+MIME-Version: 1.0
+Subject: =?utf-8?b?0J3QvtCy0YvQuSDQvtGC0LfRi9CyINC+INCx0LvQvtCz0LU=?=
+From: gaidysheff@yandex.ru
+To: user1@example.com
+Date: Wed, 05 Oct 2022 08:24:19 -0000
+Message-ID: <166495825991.62941.12099160416619217153@XiaomiA30>
+
+--===============8812852253681458549==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <h2>Вы получили новый отклик на:
+      "Путешествие во времени — Запределье [Burning Crusade]"
+    <a href="https://blogging.com/post/puteshestvie-vo-vremeni-zapredele-burning-crusade/">
+    </a>
+  </h2>
+  <p>Посмотреть этот отклик от user2@example.ru
+    <a href="https://blogging.com/post/puteshestvie-vo-vremeni-zapredele-burning-crusade/">Кликнуть здесь</a>
+  </p>
+</body>
+
+</html>
+
+--===============8812852253681458549==--
+
+-------------------------------------------------------------------------------
