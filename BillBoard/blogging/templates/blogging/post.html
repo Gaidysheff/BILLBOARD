@@ -28,7 +28,9 @@
             Your browser does not support the video tag.
           </video>
           {% endif %}
+          <br />
           <!-- ------------------------------- -->
+          <br />
           <p>
             <a href="#"> Share this post </a>
           </p>
@@ -94,7 +96,13 @@
   <a href="{% url 'feedback_create' post.slug %}" class="btn btn-warning"
     >Оставить комментарий</a
   >
-  {% endif %} {% endif %}
+  {% endif %} {% else %}
+  <h3>
+    ЗАРЕГИСТРИРУЙТЕСЬ и тогда вы сможете опубликовывать свои посты, получать на
+    них отклики, модерировать отклики и комментировать посты других
+    пользователей
+  </h3>
+  {% endif %}
   <hr />
 </div>
 
