@@ -45,7 +45,7 @@
           <button class="btn btn-outline-success">Accepted</button>
           {% else %}
           <a href="{% url 'feedback_accept' post.slug feedback.id %}">
-            <button class="btn btn-success">Accept</button>
+            <button class="btn btn-success" target="_blank">Accept</button>
           </a>
           {% endif %}
           <br />

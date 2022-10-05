@@ -1,6 +1,6 @@
+from blogging.models import Post
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
-from blogging.models import Post
 
 
 class IsAuthorMixin(LoginRequiredMixin):

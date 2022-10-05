@@ -12,10 +12,10 @@
       <p class="font-weight-bold">
         {{ feedback.author }}
         <span class="text-muted font-weight-normal">
-          {{ comment.dateCreation }}
+          {{ feedback.dateCreation }}
         </span>
       </p>
-      {{ comment.text | linebreaks }}
+      {{ feedback.text | linebreaks }}
     </div>
     {% endfor %}
   </div>

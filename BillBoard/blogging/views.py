@@ -1,4 +1,3 @@
-from blogging.utils.permissions import IsAuthorMixin, NotIsAuthorMixin
 from multiprocessing import context
 
 from django.contrib.auth.forms import AuthenticationForm
@@ -10,10 +9,11 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.views import View
-from django.views.generic import (CreateView, DeleteView, ListView,
-                                  UpdateView)
+from django.views.generic import CreateView, DeleteView, ListView, UpdateView
 from newsletters.forms import JoinForm
 from newsletters.models import Join
+
+from blogging.utils.permissions import IsAuthorMixin, NotIsAuthorMixin
 
 from .forms import AddPostForm, FeedbackForm
 from .models import Category, Feedback, Post
@@ -85,7 +85,6 @@ class PostsInCategory(DataMixin, ListView):
     model = Post
     template_name = 'blogging/HomePage.html'
     context_object_name = 'posts'
-    # allow_empty = False
 
     def get_queryset(self):
         return Post.objects.filter(cat__slug=self.kwargs['cat_slug']).select_related('cat')
@@ -148,34 +147,15 @@ class DeleteBlog(IsAuthorMixin, DeleteView):
         return context
 
 
-class FeedbackList(DataMixin, ListView):
-    model = Feedback
-    template_name = 'blogging/feedback_list.html'
-    context_object_name = 'feedback_list'
-
-    def get_queryset(self):
-        return Feedback.objects.all()
-
-
-def about(request):
-    return render(request, 'blogging/about.html', {'title': 'О сайте'})
-
-
-def contact(request):
-    return HttpResponse("<h1>Контакты</h1>")
-
-
-def pageNotFound(request, exception):
-    return render(request, 'blogging/PageNotFound.html')
-
 class FeedbackCreate(NotIsAuthorMixin, View):
+
     def get(self, request, **kwargs):
         form = FeedbackForm(request.POST or None)
         post = Post.objects.get(slug=kwargs['post_slug'])
 
         context = {
             'form': form,
-            'post': post
+            'post': post,
         }
 
         return render(request, 'blogging/feedback_create.html', context)
@@ -191,10 +171,10 @@ class FeedbackCreate(NotIsAuthorMixin, View):
             feedback.post = Post.objects.get(slug=post_slug)
             feedback.save()
 
-        return redirect('/')
+        return redirect('post', post_slug)
 
 
-class FeedbacksList(IsAuthorMixin, View):  # IsAuthorMixin,
+class FeedbacksList(IsAuthorMixin, View):
     def get(self, request, *args, **kwargs):
         post_slug = self.kwargs['post_slug']
         post = Post.objects.get(slug=post_slug)
@@ -246,3 +226,15 @@ class FeedbackDelete(LoginRequiredMixin, DeleteView):
         feedback_id = self.kwargs.get('feedback_pk')
         feedback = Feedback.objects.get(pk=feedback_id)
         return feedback
+
+
+def about(request):
+    return render(request, 'blogging/about.html', {'title': 'О сайте'})
+
+
+def contact(request):
+    return HttpResponse("<h1>Контакты</h1>")
+
+
+def pageNotFound(request, exception):
+    return render(request, 'blogging/PageNotFound.html')

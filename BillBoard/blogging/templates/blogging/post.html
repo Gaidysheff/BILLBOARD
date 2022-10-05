@@ -50,10 +50,9 @@
 <!-- -------------------------------------------------------------- -->
 <div class="col-md-8 card mb-4 mt-3">
   <div class="card-body">
-    <!-- comments -->
     <h4>{{ feedbacks.count }} комментариев</h4>
 
-    <h1>Комментарии к этому посту:</h1>
+    <h1>Отзывы к этому посту:</h1>
 
     {% for feedback in feedbacks %}
     <div class="col-md-8 card mb-4 mt-3">
@@ -70,7 +69,16 @@
     {% endfor %}
   </div>
 </div>
-
+<!-- ----------------------------------- -->
+<div class="col-md-8 card mb-4 mt-3">
+  <div class="card-body">
+    {% if new_feedback %}
+    <div class="alert alert-success" role="alert">
+      Your feedback is awaiting moderation
+    </div>
+    {% endif %}
+  </div>
+</div>
 <!-- ----------------- for post owner ------------ -->
 
 <div class="card-footer">
@@ -87,14 +95,17 @@
     >Удалить статью</a
   >
 
-  <a href="{% url 'feedback_list' post.slug %}" class="btn btn-outline-primary"
+  <a
+    href="{% url 'feedback_list' post.slug %}"
+    class="btn btn-outline-primary"
+    target="_blank"
     >Все комментарии к стать</a
   >
   <!-- ----------------- a user makes a new comment ------------ -->
   {% else %}
 
   <a href="{% url 'feedback_create' post.slug %}" class="btn btn-warning"
-    >Оставить комментарий</a
+    >Оставить отзыв</a
   >
   {% endif %} {% else %}
   <h3>

@@ -53,4 +53,4 @@ class FeedbackForm(forms.ModelForm):
 
     class Meta:
         model = Feedback
-        fields = ['text',]
+        fields = ['text', ]
