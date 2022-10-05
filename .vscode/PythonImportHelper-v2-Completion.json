@@ -1701,7 +1701,16 @@
         "kind": 2,
         "importPath": "BillBoard.blogging.signals",
         "description": "BillBoard.blogging.signals",
-        "peekOfCode": "def notify_post(sender, instance, created, **kwargs):\n    if created:\n        user = instance.author\n        html = render_to_string(\n            'blogging/mail.html',\n            {\n                'user': user,\n                'comment': instance,\n            },\n        )",
+        "peekOfCode": "def notify_post(sender, instance, created, **kwargs):\n    if created:\n        user = instance.author\n        html = render_to_string(\n            'blogging/mail.html',\n            {\n                'user': user,\n                'feedback': instance,\n            },\n        )",
+        "detail": "BillBoard.blogging.signals",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "kind": 2,
+        "importPath": "BillBoard.blogging.signals",
+        "description": "BillBoard.blogging.signals",
+        "peekOfCode": "def send_mail(sender, instance, created, **kwargs):\n    if created:\n        user = instance.post.author\n        html = render_to_string(\n            'blogging/messages/new_feedback.html',\n            {\n                'user': user,\n                'feedback': instance,\n            },\n        )",
         "detail": "BillBoard.blogging.signals",
         "documentation": {}
     },

@@ -1,0 +1,19 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <h2>Вы получили новый отклик на:
+      "{{feedback.post.title}}"
+    <a href="https://blogging.com{% url 'post' feedback.post.slug %}">
+    </a>
+  </h2>
+  <p>Посмотреть этот отклик от {{ feedback.author }}
+    <a href="https://blogging.com{% url 'post' feedback.post.slug %}">Кликнуть здесь</a>
+  </p>
+</body>
+
+</html>

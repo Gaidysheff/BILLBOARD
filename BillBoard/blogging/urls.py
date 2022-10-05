@@ -1,10 +1,10 @@
+from customuser.views import signup
 from django.urls import path
 
-from .views import (about, PostsHome, FeedbackList, PostsInCategory, AddBlog, UpdateBlog,
-                    DeleteBlog, contact, LoginUser, show_post, FeedbacksList,
-                    FeedbackAccept, FeedbackReject, FeedbackDelete
-                    )
-from customuser.views import signup
+from .views import (AddBlog, DeleteBlog, FeedbackAccept, FeedbackDelete,
+                    FeedbackList, FeedbackReject, FeedbacksList, LoginUser,
+                    PostsHome, PostsInCategory, UpdateBlog, about, contact,
+                    show_post)
 
 urlpatterns = [
     path('', PostsHome.as_view(), name='home'),

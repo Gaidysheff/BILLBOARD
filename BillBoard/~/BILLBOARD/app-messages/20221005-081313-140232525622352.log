@@ -1,0 +1,40 @@
+Content-Type: multipart/alternative;
+ boundary="===============1430723337999854882=="
+MIME-Version: 1.0
+Subject: =?utf-8?b?0JLQsNGIINC+0YLQt9GL0LIg0L/QvtC70YPRh9C10L0=?=
+From: aidysheff@yandex.ru
+To: user6@example.com
+Date: Wed, 05 Oct 2022 05:13:13 -0000
+Message-ID: <166494679353.33800.9077423337771650374@XiaomiA30>
+
+--===============1430723337999854882==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+  <h2>Отзыв на статью:
+    <a href="https://blogging.com/post/dni-pamyati-na-dvore-nedelya-urozhaya/">
+      Дни памяти: на дворе Неделя урожая
+    </a>
+  </h2>
+  <p> 
+    
+    подтверждён автором статьи:
+    
+    user2@example.ru
+  </p>
+</body>
+
+</html>
+--===============1430723337999854882==--
+
+-------------------------------------------------------------------------------
