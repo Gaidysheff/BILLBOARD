@@ -14,24 +14,34 @@
           <br />
         </small>
         {% if user.is_authenticated %}
-        <br>
+        <br />
         {% if user.id == p.author.id %}
 
         <div
           class="badge bg-success text-wrap"
-          style="font-size: 1em; padding: 0.2em; font-weight: 300">
-          МОЯ ПРИВАТНАЯ СТРАНИЦА 
-          <br>
+          style="font-size: 1em; padding: 0.2em; font-weight: 300"
+        >
+          МОЯ ПРИВАТНАЯ СТРАНИЦА
+          <br />
           (Это мой пост и комменты к нему)
         </div>
-        <br>
+        <br />
         <small>
-          <a href="{% url 'update_blog' p.slug %}" target="_blank" class="btn btn-outline-success">Изменить</a>
-          <a href="{% url 'delete_blog' p.slug %}" class="btn btn-outline-danger">Удалить</a>
+          <a
+            href="{% url 'update_blog' p.slug %}"
+            target="_blank"
+            class="btn btn-outline-success"
+            >Изменить</a
+          >
+          <a
+            href="{% url 'delete_blog' p.slug %}"
+            class="btn btn-outline-danger"
+            >Удалить</a
+          >
         </small>
         {% endif %} {% endif %}
         <br />
-        
+
         {% if p.photo %}
         <img class="rounded-img" src="{{p.photo.url}}" alt="image" />
         {% endif %}
@@ -44,7 +54,8 @@
             height="240"
             controls
             src="{{ p.upload.url }}"
-            alt="video">
+            alt="video"
+          >
             Your browser does not support the video tag.
           </video>
           {% endif %}
@@ -54,7 +65,8 @@
               href="{{ p.get_absolute_url }}"
               target="_blank"
               class="btn btn-outline-success"
-              >Читать пост</a>
+              >Читать пост</a
+            >
           </p>
         </div>
       </div>
